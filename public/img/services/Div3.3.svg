@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 233.58 260.62">
+  <defs>
+    <style>
+      .cls-1 {
+        filter: url(#drop-shadow-1);
+      }
+
+      .cls-2 {
+        fill: #086;
+      }
+    </style>
+    <filter id="drop-shadow-1" x="-8.21" y="-8.38" width="264" height="291" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur" stdDeviation="5"/>
+      <feFlood flood-color="#231f20" flood-opacity=".75"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Web">
+    <g class="cls-1">
+      <path class="cls-2" d="M143.83,84.37l7.01,6.99c.21-.51,2.38-2.92,2.38-3.12v-41.88h-24.3v-24.25h-47.84v113h72.14v-9.38l-25.28-25.47,15.89-15.9ZM88.34,29.62h14.03v7.5h-14.03v-7.5ZM88.34,44.62h14.03v7.5h-14.03v-7.5ZM88.34,59.62h42.83v7.5h-42.83v-7.5ZM88.34,74.62h42.83v7.5h-42.83v-7.5ZM120.15,127.62h-31.81v-22.5h31.81v22.5ZM120.15,97.12h-31.81v-7.5h31.81v7.5Z"/>
+      <polygon class="cls-2" points="136.69 27.62 136.69 38.87 147.96 38.87 136.69 27.62"/>
+      <path class="cls-2" d="M143.61,95.14l-5.16,5.11,19.91,19.87c.95-1.42,4.37-3.72,5.02-5,.1-.19.17-.31,0-.5l-19.77-19.48Z"/>
+      <rect class="cls-2" x="96.11" y="112.62" width="16.28" height="7.5"/>
+      <path class="cls-2" d="M179.46,68.43c-2.14.29-4.07,1.72-5.44,3.32l-17.75,25,5.59,5.58,25.29-17.97c6.91-6.5,2.01-17.24-7.69-15.93Z"/>
+      <path class="cls-2" d="M221.79,0H11.79C5.28,0,0,5.28,0,11.79v237.04c0,6.51,5.28,11.79,11.79,11.79h210c6.51,0,11.79-5.28,11.79-11.79V11.79c0-6.51-5.28-11.79-11.79-11.79ZM192.92,89.37l-25.67,18.38,7,7-13.27,13.25v14.62h-87.67V14.62h61.12l26.55,26.62v35.62c4.36-4.83,6.85-11.66,13.1-14.55,17.18-7.92,31.95,13.84,18.83,27.05Z"/>
+    </g>
+  </g>
+</svg>

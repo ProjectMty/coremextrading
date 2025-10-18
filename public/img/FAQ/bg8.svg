@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1991 979">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-2);
+        filter: url(#drop-shadow-1);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-4 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-1" width="1991" height="979"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="-570.14" y1="-183.63" x2="1432.72" y2="941.11" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0f9855"/>
+      <stop offset=".08" stop-color="#0b7c4f"/>
+      <stop offset=".21" stop-color="#075749"/>
+      <stop offset=".32" stop-color="#043c44"/>
+      <stop offset=".43" stop-color="#022b41"/>
+      <stop offset=".51" stop-color="#022640"/>
+      <stop offset=".59" stop-color="#022b40"/>
+      <stop offset=".68" stop-color="#043943"/>
+      <stop offset=".79" stop-color="#075248"/>
+      <stop offset=".9" stop-color="#0a744e"/>
+      <stop offset="1" stop-color="#0f9855"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="1095.09" y1="-2448.37" x2="2105.42" y2="-700.97" gradientTransform="translate(-507.66 3090.24)" xlink:href="#linear-gradient"/>
+    <filter id="drop-shadow-1" x="350" y="161" width="1307" height="2392" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur" stdDeviation="5"/>
+      <feFlood flood-color="#231f20" flood-opacity=".75"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Web">
+    <g class="cls-4">
+      <g id="Baground">
+        <rect class="cls-3" x="-128.41" y="-256.4" width="2246.81" height="1903.4"/>
+      </g>
+      <rect class="cls-2" x="358.42" y="169.4" width="1276.58" height="2360.69" rx="35.03" ry="35.03" transform="translate(1993.42 2699.48) rotate(-180)"/>
+    </g>
+  </g>
+</svg>
