@@ -10,7 +10,7 @@ const items = [
 
 export default function Services() {
   return (
-    <SectionBG src="/bg2.svg" minH="min-h-[520px]" objectPosition="object-center">
+    <SectionBG src="/bg2.svg" minH="min-h-[520px]" objectPosition="bg-center">
       <div className="w-full py-10 md:py-12">
         <h2 className="text-center text-white font-extrabold tracking-[0.08em] text-[22px] md:text-[26px]">
           SERVICES
