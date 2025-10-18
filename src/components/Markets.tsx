@@ -4,36 +4,37 @@
 import Image from 'next/image';
 
 export default function Markets() {
-  // Franja a todo lo ancho (bg1)
   const ASPECT_W = 1990;
   const ASPECT_H = 750;
 
-  // Desplaza el panel derecho hacia la IZQUIERDA sin cambiar su ancho
-  const SHIFT = 17;
+  const SHIFT = 16;
 
-  // Safe area del rectángulo interno de bg1 (bordes redondeados)
+  // Safe area dentro del rectángulo de bg1
   const CARD = { left: 6, right: 6, top: 6.5, bottom: 7.5 };
 
-  // Panel derecho (bg2 + textos), relativo al CARD
+  // Panel derecho (bg2 + textos)
   const PANEL = {
-    left: 55 - SHIFT,
+    left: 45 - SHIFT,
     right: 1.5 + SHIFT,
-    top: 16,
+    top: 17,
     bottom: 6,
   };
 
-  // Posiciones base (en %) de cada texto dentro del PANEL
   const HEAD = { top1: 9, top2: 49 };
 
-  // 🔧 Offsets SOLO para los textos (px)
-  //  dx: +derecha / -izquierda,  dy: +abajo / -arriba
-  const TEXT1 = { dx: 10, dy: 0 }; // "Marketplace fulfillment…"
-  const TEXT2 = { dx: 10, dy: 6 }; // "Direct to client parcel shipping"
+  const TEXT1 = { dx: 10, dy: 0 };
+  const TEXT2 = { dx: 10, dy: 6 };
 
   return (
-    <section id="markets" className="relative py-2">
-      {/* BG1 full-bleed */}
-      <div className={`relative w-screen left-1/2 -translate-x-1/2 aspect-[${ASPECT_W}/${ASPECT_H}]`}>
+    // isolate crea un stacking context; mb separa de la siguiente sección
+    <section id="markets" className="relative isolate py-2 mb-14">
+      {/* Full-bleed; altura mínima + fondo de respaldo por si falla el SVG */}
+      <div
+        className={`relative z-0 overflow-hidden w-screen left-1/2 -translate-x-1/2
+                    aspect-[${ASPECT_W}/${ASPECT_H}] min-h-[520px]
+                    bg-gradient-to-br from-[#12925e] via-[#0a6b56] to-[#062b3a]`}
+      >
+        {/* BG1: si el archivo está bien, cubrirá el gradiente de respaldo */}
         <Image
           src="/img/markets/bg1.svg"
           alt="Markets base"
@@ -43,7 +44,7 @@ export default function Markets() {
           priority
         />
 
-        {/* Safe area del rectángulo redondeado */}
+        {/* Safe area (bordes internos del rectángulo redondeado) */}
         <div
           className="absolute inset-0"
           style={{
@@ -53,9 +54,9 @@ export default function Markets() {
             bottom: `${CARD.bottom}%`,
           }}
         >
-          {/* Título dentro de bg1 */}
+          {/* Título */}
           <h2
-            className="mb-3 md:mb-4 text-center font-extrabold tracking-wide text-white
+            className="relative z-[2] mb-3 md:mb-4 text-center font-extrabold tracking-wide text-white
                        drop-shadow-[0_6px_16px_rgba(0,0,0,0.35)]
                        text-[clamp(22px,3.2vw,44px)]"
           >
@@ -64,7 +65,7 @@ export default function Markets() {
 
           {/* Panel derecho (bg2 + textos) */}
           <div
-            className="absolute z-10 pointer-events-none px-[clamp(8px,1vw,16px)]"
+            className="absolute z-[1] px-[clamp(8px,1vw,16px)]"
             style={{
               left: `${PANEL.left}%`,
               right: `${PANEL.right}%`,
