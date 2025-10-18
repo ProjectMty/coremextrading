@@ -7,7 +7,7 @@ export default function Markets() {
   const ASPECT_W = 1990;
   const ASPECT_H = 750;
 
-  const SHIFT = 16;
+  const SHIFT = 17;
 
   // Safe area dentro del rectángulo de bg1
   const CARD = { left: 6, right: 6, top: 6.5, bottom: 7.5 };
@@ -16,14 +16,14 @@ export default function Markets() {
   const PANEL = {
     left: 45 - SHIFT,
     right: 1.5 + SHIFT,
-    top: 17,
+    top:19,
     bottom: 6,
   };
 
-  const HEAD = { top1: 9, top2: 49 };
+  const HEAD = { top1: -2, top2: 49 };
 
-  const TEXT1 = { dx: 10, dy: 0 };
-  const TEXT2 = { dx: 10, dy: 6 };
+  const TEXT1 = { dx: 250, dy: -20 };
+  const TEXT2 = { dx: 250, dy: 6 };
 
   return (
     // isolate crea un stacking context; mb separa de la siguiente sección
