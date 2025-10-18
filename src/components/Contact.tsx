@@ -171,7 +171,7 @@ export default function Contact() {
                   fontSize: LEFT_TEXT.lineSizeClamp as any,
                 }}
               >
-                +1 210-765-7162
+                +1 (210) 774-7644
               </p>
 
               <p
@@ -239,7 +239,7 @@ export default function Contact() {
                   fontSize: RIGHT_TEXT.sizeClamp as any,
                 }}
               >
-                Core Mex Trading · 14407 ATLANTA DR · LAREDO TX 78045
+                Core Mex Trading · 6019 Riverside DrLaredo, TX 78041
               </p>
             </div>
 
