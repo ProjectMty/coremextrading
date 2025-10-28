@@ -13,6 +13,7 @@ green: "#00A86B", // Verde principal CoreMex
 blue: "#0072CE", // Azul secundario CoreMex
 dark: "#0A0F1C",
 light: "#F5F7FA",
+white: "#ffffff"
 },
 },
 backgroundImage: {

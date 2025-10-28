@@ -1,0 +1,4 @@
+.contenedor-fondo-services{
+    @apply   z-10 absolute inset-0
+    bg-gradient-to-br from-[#0d8351]  via-[#032c41]/90 to-[#0b734e] h-full
+}
