@@ -8,6 +8,8 @@ import GetStarted from '@/components/GetStarted';
 import Contact from '@/components/Contact';
 import Body from '@/components/Body';
 import Partners from '@/components/Partners';
+
+
 export default function HomePage() {
 
   
@@ -22,6 +24,7 @@ export default function HomePage() {
       <Pricing />
       <FAQ />
       <GetStarted />
+    
       <Contact />
     </main>
   );

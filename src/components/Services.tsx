@@ -1,23 +1,24 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import "@/style/services.css";
 
 type ServiceCard = {
-  bg: string;      // imagen para el fondo (svg/png)
+  bg: string;      // color de fondo
   label: string;   // texto encima
   bgClass?: string;
 };
 
 const ITEMS: ServiceCard[] = [
-  { bg: '/img/services/Div3.1.svg', label: 'Receive parcels from US marketplaces and retailers' },
-  { bg: '/img/services/Div3.2.svg', label: 'Package consolidation' },
-  { bg: '/img/services/Div3.3.svg', label: 'Customs clearance into Mexico' },
+  { bg: '#006a7a', label: 'Receive parcels from US marketplaces and retailers' },
+  { bg: '#007972', label: 'Package consolidation' },
+  { bg: '#008866', label: 'Customs clearance into Mexico' },
   {
-    bg: '/img/services/Div3.4.svg',
+    bg: '#007972',
     label: 'Label, prep, and deliver to last mile carrier for final delivery to client',
   },
   {
-    bg: '/img/services/Div3.5.svg',
+    bg: '#006a7a',
     label:
       'Returns logistics: we receive your returns in Mexico and complete reverse logistics to return back to the USA.',
   },
@@ -37,70 +38,53 @@ export default function Services() {
   }, []);
 
   return (
-    <section id="services" className="relative py-12 md:py-16">
+    <section id="services" className="section-services">
       {/* Fondo full-width */}
-      <div
-        className="absolute inset-0 -z-10 bg-no-repeat bg-cover bg-center"
-        style={{ backgroundImage: "url('/img/services/bg2.png')" }}
-        aria-hidden
-      />
+      <div className='contenedor-fondo-services'>
+        <div className="site-container contenedor-gradiente-superior-services">
+          <h2
+            className={[
+              'titulo-section-services',
+              'transition-all duration-700',
+              mounted ? 'contenedor-entrada' : 'contenedor-salida',
+            ].join(' ')}
+            style={{ transitionDelay: `${REVEAL.baseDelay}ms` }}
+          >
+            SERVICES
+          </h2>
 
-      <div className="site-container">
-        <h2
-          className={[
-            'text-center text-white font-extrabold tracking-wide',
-            'text-[28px] md:text-[40px]',
-            'transition-all duration-700',
-            mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2',
-          ].join(' ')}
-          style={{ transitionDelay: `${REVEAL.baseDelay}ms` }}
-        >
-          SERVICES
-        </h2>
-
-        <div className="mt-8">
-          {/* Grid responsivo: auto-fit con tarjetas de 180–220px mínimo */}
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(180px,1fr))] gap-5 md:gap-7">
-            {ITEMS.map((item, i) => (
-              <article
-                key={i}
-                className={[
-                  'relative isolate overflow-hidden rounded-[22px]',
-                  'shadow-[0_8px_18px_rgba(0,0,0,0.28)]',
-                  'transition-all duration-700 will-change-transform',
-                  'hover:-translate-y-0.5',
-                  'h-[200px] sm:h-[210px] md:h-[230px] lg:h-[240px]',
-                  'bg-transparent',
-                  mounted ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-3 scale-[0.98]',
-                ].join(' ')}
-                style={{ transitionDelay: `${REVEAL.baseDelay + (i + 1) * REVEAL.step}ms` }}
-              >
-                {/* Fondo que cubre TODO y 1px extra para eliminar “hairline” */}
-                <div
+          <div className="mt-8">
+            {/* Grid responsivo: auto-fit con tarjetas de 180–220px mínimo */}
+            <div className="contenedor-tarjetas-services">
+              {ITEMS.map((item, i) => (
+                <article
+                  key={i}
                   className={[
-                    'absolute -inset-[1px] rounded-[22px]',
-                    'bg-center bg-no-repeat',
-                    'bg-[length:102%_102%]',        // estira un poco para tapar bordes
-                    'pointer-events-none select-none',
-                    item.bgClass ?? '',
+                    'contenedor-tarjeta-services',
+                    'transform-body',
+                    mounted ? 'contenedor-entrada scale-100' : 'contenedor-salida scale-[0.98]',
                   ].join(' ')}
-                  style={{ backgroundImage: `url('${item.bg}')` }}
-                  aria-hidden
-                />
-
-                {/* Texto encima */}
-                <p
-                  className="
-                    absolute inset-x-3 bottom-3
-                    text-center text-white
-                    text-[12.5px] md:text-[13px] leading-snug
-                    drop-shadow-[0_1px_1px_rgba(0,0,0,0.35)]
-                  "
+                  style={{ transitionDelay: `${REVEAL.baseDelay + (i + 1) * REVEAL.step}ms` }}
                 >
-                  {item.label}
-                </p>
-              </article>
-            ))}
+                  {/* Fondo que cubre TODO y 1px extra para eliminar “hairline” */}
+                  <div
+                    className={[
+                      'fondo-tarjeta-services',
+                      item.bgClass ?? '',
+                    ].join(' ')}
+                    style={{ backgroundColor: item.bg }}
+                    aria-hidden
+                  />
+
+                  {/* Texto encima */}
+                  <p
+                    className="texto-tarjeta-services"
+                  >
+                    {item.label}
+                  </p>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </div>

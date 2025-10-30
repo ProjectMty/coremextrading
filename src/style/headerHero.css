@@ -1,0 +1,132 @@
+@reference "tailwindcss";
+
+/* #region FONDO */
+.fondo-section{
+    @apply bg-gradient-to-r from-[#064846] via-[#022941] via-50% to-[#09604b] min-h-[800px] font-[poppins]
+     
+}
+
+.fondo-titulo{
+    @apply bg-gradient-to-br from-[#032e42] via-[#032e42] via-20%  to-[#0f9655] h-[700px] w-[85%]
+    rounded-br-[400px] shadow-[10px_10px_20px_rgba(0,0,0,0.75)] 
+}
+/* #endregion */
+/* #region NAVBAR */
+.img-planeta{
+    @apply  absolute right-[5%] scale-[100%] top-[40%]
+}
+
+.navbar{
+    @apply items-start justify-around drop-shadow-[0_1px_6px_rgba(0,0,0,0.35)]
+     fixed w-full py-3 px-[5%] z-50 bg-white/0
+}
+
+.logo-navbar{
+    @apply  items-start gap-0 
+}
+
+.contenedor-links-navbar{
+    @apply  hidden w-0
+}
+
+.link-navbar{
+    @apply  text-white/90 hover:text-white text-[15px] font-light transition-colors
+    
+}
+.botton-login{
+    @apply text-white border-white border-2 rounded-[20px] py-1 px-5 
+}
+
+/* #endregion */
+/* #region TITULO */
+.contenedor-titulo-hero{
+    @apply py-[22%] pl-[28%]  max-w-[95%] text-white transition-all duration-700
+}
+
+.contenedor-text-titulo-hero{
+    @apply text-[30px] md:text-[50px] lg:text-[47px] font-semibold leading-[110%]
+}
+
+.texto-titulo-hero{
+    @apply block transition-all duration-700 will-change-transform
+}
+
+.contenedor-subtitulo-hero{
+    @apply mt-3 md:mt-4
+}
+
+.subtitulo-hero{
+    @apply text-white/90 text-[16px] md:text-[35px] font-extralight transition-all duration-700
+}
+/* #endregion */
+
+@media (min-width: 500px) {
+    
+}
+
+@media (min-width: 1024px) {
+    /* #region FONDO */
+.fondo-section{
+    @apply bg-gradient-to-r from-[#064846] via-[#022941] via-50% to-[#09604b] h-full font-[poppins]
+     
+}
+
+.fondo-titulo{
+    @apply bg-gradient-to-br from-[#032e42] via-[#032e42] via-20%  to-[#0f9655] h-[700px] w-[65%]
+    rounded-br-[400px] shadow-[10px_10px_20px_rgba(0,0,0,0.75)] 
+}
+/* #endregion */
+/* #region NAVBAR */
+.img-planeta{
+    @apply  absolute right-[20%] scale-[180%] top-[30%]
+}
+
+.navbar{
+    @apply  flex items-center justify-around drop-shadow-[0_1px_6px_rgba(0,0,0,0.35)]
+     fixed w-[100%] py-3 px-[5%] z-50 bg-white/0
+}
+
+.logo-navbar{
+    @apply flex items-center gap-[10px] transition-all duration-700
+}
+
+.contenedor-links-navbar{
+    @apply  flex items-end gap-[50px] transition-all duration-700 
+}
+
+.link-navbar{
+    @apply relative text-white/90 hover:text-white text-[15px] font-light transition-colors
+    
+}
+.botton-login{
+    @apply text-white border-white border-2 rounded-[20px] py-1 px-5 
+}
+
+/* #endregion */
+/* #region TITULO */
+.contenedor-titulo-hero{
+    @apply py-[22%] pl-[28%]  max-w-[95%] text-white transition-all duration-700
+}
+
+.contenedor-text-titulo-hero{
+    @apply text-[30px] md:text-[50px] lg:text-[47px] font-semibold leading-[110%]
+}
+
+.texto-titulo-hero{
+    @apply block transition-all duration-700 will-change-transform
+}
+
+.contenedor-subtitulo-hero{
+    @apply mt-3 md:mt-4
+}
+
+.subtitulo-hero{
+    @apply text-white/90 text-[16px] md:text-[35px] font-extralight transition-all duration-700
+}
+/* #endregion */
+
+}
+
+@media (min-width: 2000px) {
+    
+}

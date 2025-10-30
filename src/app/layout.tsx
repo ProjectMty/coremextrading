@@ -11,6 +11,9 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: 'CoreMex Trading',
   description: 'Commercial parcel shipping from USA to Mexico.',
+  icons: {
+    icon: 'img/favicon.svg',
+  }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

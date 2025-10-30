@@ -3,6 +3,7 @@ content: [
 "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
 "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
 "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+"./src/style/**/*.css"
 ],
 theme: {
 extend: {
@@ -13,6 +14,7 @@ green: "#00A86B", // Verde principal CoreMex
 blue: "#0072CE", // Azul secundario CoreMex
 dark: "#0A0F1C",
 light: "#F5F7FA",
+white: "#ffffff"
 },
 },
 backgroundImage: {

@@ -138,7 +138,7 @@ export default function Pricing() {
     <section id="pricing" className="py-10 md:py-14 pb-24">
       {/* Título */}
       <div className="text-center">
-        <h2 className="text-[28px] md:text-[32px] font-extrabold text-[#0a2a38]">
+        <h2 className="text-[28px] md:text-[50px] font-bold text-[#006a7a]">
           PRICING
         </h2>
         <p className="mt-1 text-sm md:text-base text-[#0a2a38]/80">
