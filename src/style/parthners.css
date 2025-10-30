@@ -1,0 +1,11 @@
+@reference "tailwindcss";
+
+.contenedor-fondo-parth{
+    @apply bg-gradient-to-b from-[#0e8e53] via-[#022740] to-[#0e8e53]
+    h-[70%] mx-[20%] rounded-[60px] grid grid-cols-5 p-5
+}
+
+.logo-hover-path{
+    @apply  px-6 grayscale hover:grayscale-0 transition duration-300 ease-in-out
+    content-center
+}

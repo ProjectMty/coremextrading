@@ -1,0 +1,68 @@
+@reference "tailwindcss";
+
+.section-markets{
+    @apply relative py-2 mb-14 content-center
+}
+
+.contenedor-fondo-markets{
+    @apply relative z-0  
+     min-h-[520px] 
+    bg-gradient-to-br from-[#0a6a4c] via-[#022740] via-40% to-[#09664c]
+}
+
+.contenedor-gradiente-arriba-markets{
+    @apply  bg-gradient-to-br from-[#0f9655] via-[#022640] via-60% to-[#064c47]
+     h-full py-10 rounded-t-[40px] mx-[20%] grid grid-cols-4
+}
+.contenedor-izq-markets{
+    @apply py-5 
+}
+
+.contenedor-der-markets{
+    @apply col-span-3 z-[1] px-10
+}
+.titulo-markets{
+    @apply  left-0 right-0 text-white font-bold leading-[1.15] mb-5
+    drop-shadow-[0_6px_16px_rgba(0,0,0,0.35)]
+    text-[clamp(13px,1.6vw,25px)] max-w-[min(52ch,760px)]
+}
+
+.contenedor-row-markets{
+    @apply bg-white rounded-[40px] h-[10%] flex content-center text-center items-center justify-center my-2
+}
+
+.circulo-markets{
+    @apply rounded-full  h-4 w-4 mx-0.5;
+    
+}
+
+.img-bandera-markets{
+    @apply mx-2 p-1
+}
+
+.estado-markets{
+    @apply font-medium text-[clamp(13px,1.5vw,25px)]
+}
+/* #region FLECHA */
+
+
+.contenedor-flecha-markets{
+    @apply flex items-center justify-center content-center  
+}
+
+.linea-flecha-markets{
+    @apply h-0.5 w-5  flex translate-x-1
+}
+
+.contenedor-triangulo-markets{
+    @apply relative w-3.5 h-5 
+}
+
+.linea-arriba-flecha-markets{
+    @apply absolute top-0 left-0 w-full h-0.5 rotate-45 origin-left 
+}
+
+.linea-abajo-flecha-markets{
+    @apply absolute bottom-0 left-0 w-full h-0.5 -rotate-45 origin-left 
+}
+/* #endregion */

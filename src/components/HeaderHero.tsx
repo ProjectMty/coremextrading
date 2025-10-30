@@ -76,7 +76,6 @@ export default function HeaderHero() {
           ))}
          
         </nav>
- <button className='botton-login'>Login</button>
 
         <div className="lg:hidden p-2 rounded-md">
           <button
@@ -140,15 +139,7 @@ export default function HeaderHero() {
                     {item.label}
                   </a>
                 ))}
-                <a
-                  href="#calculadora"
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                  }}
-                  className="block mt-4 rounded-full bg-blue-900 px-4 py-2 text-white text-center font-semibold hover:bg-[#14149c]"
-                >
-                  Login
-                </a>
+       
               </div>
             </Dialog.Panel>
           </Transition.Child>

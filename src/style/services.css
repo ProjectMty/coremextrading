@@ -1,4 +1,43 @@
+@reference "tailwindcss";
+
+.section-services{
+    @apply relative py-12 md:py-16  font-[poppins] h-full w-full
+}
 .contenedor-fondo-services{
-    @apply   z-10 absolute inset-0
-    bg-gradient-to-br from-[#0d8351]  via-[#032c41]/90 to-[#0b734e] h-full
+    @apply   z-10  pb-20
+    bg-gradient-to-r from-[#085e4a]  via-[#022740] to-[#0b734e] h-full
+}
+
+.contenedor-gradiente-superior-services{
+    @apply pt-6 pb-16 rounded-b-[40px] shadow-[10px_10px_10px_rgba(0,0,0,0.6)]
+    bg-gradient-to-br from-[#0a6a4d]  via-[#022640]/80 to-[#0a6f4e] h-full
+}
+
+.titulo-section-services{
+    @apply text-center text-white font-medium tracking-wide
+    text-[28px] md:text-[50px]
+}
+
+.contenedor-tarjetas-services{
+    @apply grid grid-cols-[repeat(auto-fit,minmax(180px,1fr))] gap-5 md:gap-7
+}
+
+.contenedor-tarjeta-services{
+    @apply relative isolate overflow-hidden rounded-[22px]
+    shadow-[10px_10px_10px_rgba(0,0,0,0.6)]
+    h-[200px] sm:h-[210px] md:h-[230px] lg:h-[240px]
+    hover:-translate-y-0.5
+    bg-transparent
+}
+
+.fondo-tarjeta-services{
+    @apply absolute -inset-[1px] rounded-[22px] pointer-events-none select-none
+}
+
+.texto-tarjeta-services{
+    @apply  absolute inset-x-3 bottom-3
+                    text-center text-white
+                    text-[12.5px] md:text-[13px] leading-snug
+                    drop-shadow-[0_1px_1px_rgba(0,0,0,0.35)]
+                  
 }

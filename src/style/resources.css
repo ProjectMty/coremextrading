@@ -1,0 +1,60 @@
+@reference "tailwindcss";
+
+.section-resources{
+    @apply relative py-5 w-full h-full font-[poppins]
+}
+
+.contenedor-fondo-resources{
+    @apply 
+    grid grid-cols-3 mx-[5%]
+}
+
+.contenedor-grid1-resources{
+    @apply w-[120%] h-[90%] flex items-end
+}
+
+.contenedor-grid2-resources{
+    @apply col-span-2 w-[80%] translate-x-25 -mt-20
+}
+.titulo-grid2-resources{
+    @apply text-start text-[#006a7a] font-medium pl-20
+    text-[28px] md:text-[50px] 
+}
+
+.subtitulo-grid2-resources{
+    @apply text-[28px]  font-normal pl-20 w-[80%]
+}
+
+.contenedor-paso-grid2-resources{
+    @apply h-[70px] rounded-[40px] 
+    shadow-[5px_5px_10px_rgba(0,0,0,0.3)] w-[80%] 
+    my-3 flex items-center
+}
+
+.shadow-flecha-resources{
+    @apply shadow-[0_5px_5px_rgba(0,0,0,0.3)]
+}
+
+.contenedor-flecha-resources{
+    @apply flex items-center justify-center content-center my-3 
+}
+
+.linea-flecha-resources{
+    @apply h-1 w-10  flex translate-x-5 
+}
+
+.contenedor-triangulo-resources{
+    @apply relative w-8 h-12 
+}
+
+.linea-arriba-flecha-resources{
+    @apply absolute top-0 left-0 w-full h-1 rotate-45 origin-left 
+}
+
+.linea-abajo-flecha-resources{
+    @apply absolute bottom-0 left-0 w-full h-1 -rotate-45 origin-left 
+}
+
+.label-grid2-resources{
+    @apply text-white text-[21px] pl-5 font-semibold px-5
+}

@@ -57,7 +57,7 @@ export default function GetStarted() {
 
   return (
     <section id="contact" className="py-10 md:py-14">
-      <h2 className="reveal text-center text-[28px] md:text-[36px] font-extrabold tracking-wide text-[#0a2a38]">
+      <h2 className="reveal text-center text-[28px] md:text-[50px] font-bold tracking-wide text-[#006a7a]">
         HOW TO GET STARTED
       </h2>
 
@@ -151,7 +151,7 @@ export default function GetStarted() {
                   className={[
                     'text-white font-semibold leading-snug drop-shadow-[0_3px_12px_rgba(0,0,0,0.35)]',
                     TEXT.c2.align === 'center' ? 'text-center' : 'text-left',
-                    'text-[clamp(13px,1.2vw,16px)]',
+                    'text-[clamp(14px,1.0vw,13px)]',
                   ].join(' ')}
                 >
                   Core Mex will set up your account so you can ship immediately.

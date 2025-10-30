@@ -1,116 +1,116 @@
 // src/components/markets.tsx
 'use client';
-
+import "@/style/markets.css"
 import Image from 'next/image';
 
 export default function Markets() {
-  const ASPECT_W = 1990;
-  const ASPECT_H = 750;
+  const Flecha = ({ color = "" }) => {
+    return (
+      <div className="contenedor-flecha-markets">
+        <div className= "linea-flecha-markets" style={{ backgroundColor: color}} />
+        <div className="contenedor-triangulo-markets">
+          <div className= "linea-arriba-flecha-markets" style={{ backgroundColor: color}} />
+          <div className= "linea-abajo-flecha-markets" style={{ backgroundColor: color}} />
+        </div>
+      </div>
+    )
+  }
 
-  const SHIFT = 17;
+  const Circulos = ({ color = "" }) => {
+    return (
+      <div className="flex justify-center content-center items-center">
+        {Array.from({ length: 15 }).map((_, index) => (
+          <div key={index} className= "circulo-markets" style={{ backgroundColor: color }} ></div>
+        ))}
+      </div>
+    )
+  }
 
-  // Safe area dentro del rectángulo de bg1
-  const CARD = { left: 6, right: 6, top: 6.5, bottom: 7.5 };
-
-  // Panel derecho (bg2 + textos)
-  const PANEL = {
-    left: 45 - SHIFT,
-    right: 1.5 + SHIFT,
-    top:19,
-    bottom: 6,
-  };
-
-  const HEAD = { top1: -2, top2: 49 };
-
-  const TEXT1 = { dx: 250, dy: -20 };
-  const TEXT2 = { dx: 250, dy: 6 };
-
+  const Row = ({ color = "", img1 = "/img/markets/usa.png", img2 = "/img/markets/mexico.png",
+    text1 = "USA", text2 = "MEX"
+  }) => {
+    return (
+      <div className="contenedor-row-markets">
+        <Image
+          src={`${img1}`}
+          alt="Resources img"
+          width={50}
+          height={50}
+          className="img-bandera-markets">
+        </Image>
+        <p className="estado-markets">{text1}</p>
+        <Flecha color={`${color}`} />
+        <Circulos color={`${color}`} />
+        <Flecha color={`${color}`} />
+        <p className="estado-markets">{text2}</p>
+        <Image
+          src={`${img2}`}
+          alt="Resources img"
+          width={50}
+          height={50}
+          className="img-bandera-markets">
+        </Image>
+      </div>
+    )
+  }
   return (
     // isolate crea un stacking context; mb separa de la siguiente sección
-    <section id="markets" className="relative isolate py-2 mb-14">
+    <section id="markets" className="section-markets">
       {/* Full-bleed; altura mínima + fondo de respaldo por si falla el SVG */}
-      <div
-        className={`relative z-0 overflow-hidden w-screen left-1/2 -translate-x-1/2
-                    aspect-[${ASPECT_W}/${ASPECT_H}] min-h-[520px]
-                    bg-gradient-to-br from-[#12925e] via-[#0a6b56] to-[#062b3a]`}
-      >
-        {/* BG1: si el archivo está bien, cubrirá el gradiente de respaldo */}
-        <Image
-          src="/img/markets/bg1.svg"
-          alt="Markets base"
-          fill
-          sizes="100vw"
-          className="object-cover"
-          priority
-        />
-
-        {/* Safe area (bordes internos del rectángulo redondeado) */}
-        <div
-          className="absolute inset-0"
-          style={{
-            left: `${CARD.left}%`,
-            right: `${CARD.right}%`,
-            top: `${CARD.top}%`,
-            bottom: `${CARD.bottom}%`,
-          }}
-        >
-          {/* Título */}
-          <h2
-            className="relative z-[2] mb-3 md:mb-4 text-center font-extrabold tracking-wide text-white
+      <div className="contenedor-fondo-markets">
+        {/* Título */}
+        <h2
+          className="relative z-[2] mb-3 md:mb-4 text-center font-extrabold tracking-wide text-white
                        drop-shadow-[0_6px_16px_rgba(0,0,0,0.35)]
                        text-[clamp(22px,3.2vw,44px)]"
-          >
-            MARKETS AND SHIPPING LANES
-          </h2>
+        >
+          MARKETS AND SHIPPING LANES
+        </h2>
 
-          {/* Panel derecho (bg2 + textos) */}
-          <div
-            className="absolute z-[1] px-[clamp(8px,1vw,16px)]"
-            style={{
-              left: `${PANEL.left}%`,
-              right: `${PANEL.right}%`,
-              top: `${PANEL.top}%`,
-              bottom: `${PANEL.bottom}%`,
-            }}
-          >
-            {/* BG2: barras */}
+        <div className="contenedor-gradiente-arriba-markets">
+          {/* panel izq */}
+          <div className="contenedor-izq-markets">
             <Image
-              src="/img/markets/bg2.svg"
-              alt=""
-              fill
-              sizes="100vw"
-              className="object-contain"
-              priority
-            />
+              src="/img/markets/flecha-circulo.svg"
+              alt="Resources img"
+              width={800}
+              height={600}
+              className="h-full w-full">
+            </Image>
+          </div>
+          {/* Panel derecho (bg2 + textos) */}
+          <div className="contenedor-der-markets">
 
             {/* Texto 1 */}
-            <p
-              className="absolute left-0 right-0 text-white font-extrabold leading-[1.15]
-                         drop-shadow-[0_6px_16px_rgba(0,0,0,0.35)]
-                         text-[clamp(13px,1.6vw,24px)] max-w-[min(52ch,760px)]"
-              style={{
-                top: `calc(${HEAD.top1}% + ${TEXT1.dy}px)`,
-                transform: `translateX(${TEXT1.dx}px)`,
-              }}
-            >
+            <p className="titulo-markets">
               Marketplace fulfillment Amazon, Mercado Libre, Walmart
             </p>
+            <Row color="#022640" img1="/img/markets/usa.png" img2="/img/markets/mexico.png"
+              text1="USA" text2="MEX" />
+
+            <Row color="#0f9955" img1="/img/markets/usa.png" img2="/img/markets/canada.png"
+              text1="USA" text2="CAN" />
+
+            <Row color="#022640" img1="/img/markets/mexico.png" img2="/img/markets/usa.png"
+              text1="MEX" text2="USA" />
 
             {/* Texto 2 */}
-            <p
-              className="absolute left-0 right-0 text-white font-extrabold leading-[1.15]
-                         drop-shadow-[0_6px_16px_rgba(0,0,0,0.35)]
-                         text-[clamp(13px,1.6vw,24px)] max-w-[min(52ch,760px)]"
-              style={{
-                top: `calc(${HEAD.top2}% + ${TEXT2.dy}px)`,
-                transform: `translateX(${TEXT2.dx}px)`,
-              }}
-            >
+            <p className="titulo-markets">
               Direct to client parcel shipping
             </p>
+  <Row color="#022640" img1="/img/markets/usa.png" img2="/img/markets/mexico.png"
+              text1="USA" text2="MEX" />
+
+            <Row color="#0f9955" img1="/img/markets/usa.png" img2="/img/markets/canada.png"
+              text1="USA" text2="CAN" />
+
+            <Row color="#022640" img1="/img/markets/canada.png" img2="/img/markets/mexico.png"
+              text1="CAN" text2="MEX" />
+
           </div>
         </div>
       </div>
+
     </section>
   );
 }
