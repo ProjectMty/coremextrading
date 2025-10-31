@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import Image from "next/image";
+import "@/style/contact.css"
 
 /* ===============================
    KNOBS: posiciones y tamaños
@@ -21,7 +22,7 @@ const LEFT_POS = {
 
 // Imagen derecha (contact2.png)
 const RIGHT_POS = {
-  width: 650,
+    width: 650,
   top: 100,
   right: -50,
 };
@@ -93,27 +94,15 @@ export default function Contact() {
         ["--right-top" as any]: `${RIGHT_POS.top}px`,
         ["--right-right" as any]: `${RIGHT_POS.right}px`,
       }}
-      className="
-        relative w-full
-        min-h-[var(--bg-h-base)]
-        md:min-h-[var(--bg-h-md)]
-        lg:min-h-[var(--bg-h-lg)]
-      "
+      className="section-contact"
     >
       {/* Fondo */}
       <div
         aria-hidden
-        className="absolute inset-0 -z-10"
-        style={{
-          backgroundImage: "url('/img/contact/contact.svg')",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: BG_SIZE,
-          backgroundPosition: BG_POS,
-        }}
-      />
+        className=" fondo-section-contact"/>
 
       {/* Contenido */}
-      <div className="relative mx-auto w-full max-w-[1280px] px-4 md:px-6 lg:px-8 h-full">
+      <div className="contenedor-informacion-contact">
         <div className="relative h-full">
           {/* ---------- IZQUIERDA ---------- */}
           <div

@@ -6,6 +6,7 @@
 }
 
 .logo-hover-path{
-    @apply  px-6 grayscale hover:grayscale-0 transition duration-300 ease-in-out
+    @apply  px-6 brightness-10 invert  hover:brightness-100 hover:invert-0
+    transition duration-300 ease-in-out
     content-center
 }

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-
+import "@/style/faq.css"
 type QAItem = { q: string; a: string };
 
 const QA: QAItem[] = [
@@ -51,21 +51,19 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="relative py-14 md:py-16 text-white">
+    <section id="faq" className="relative pt-10 text-white content-center">
       {/* Fondo full width (se adapta automáticamente a la altura) */}
       <div
-        className="absolute inset-0 -z-10 bg-no-repeat bg-cover bg-center"
-        style={{ backgroundImage: "url('/img/faq/bg8.svg')" }}
-        aria-hidden
+        className="absolute inset-0 -z-10 fondo-degradado"
       />
-      {/* Overlay para contraste (ajusta opacidad si lo necesitas) */}
-      <div className="absolute inset-0 -z-10 bg-black/15" aria-hidden />
-
-      {/* Contenedor centrado con ancho cómodo para texto largo */}
-      <div className="site-container max-w-[1150px] mx-auto">
-        <h2 className="text-[22px] md:text-[26px] font-extrabold">
+        <h2 className="titulo-section-faq">
           THE MOST IMPORTANT THINGS TO KNOW AND THE REAL ANSWERS!
         </h2>
+      <div className="absolute inset-0 -z-10 bg-black/15 fondo-degradado" aria-hidden />
+
+      {/* Contenedor centrado con ancho cómodo para texto largo */}
+      <div className="site-container max-w-[1150px] mx-auto fondo-degradado-arriba-faq">
+      
 
         <div className="mt-6 space-y-4">
           {QA.map(({ q, a }, i) => (

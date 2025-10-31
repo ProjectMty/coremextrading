@@ -1,0 +1,20 @@
+@reference "tailwindcss";
+
+.section-contact{
+    @apply 
+        relative w-full
+        min-h-[var(--bg-h-base)]
+        md:min-h-[var(--bg-h-md)]
+        lg:min-h-[var(--bg-h-lg)]
+      
+}
+
+.fondo-section-contact{
+    @apply absolute inset-0 -z-10
+     bg-gradient-to-br from-[#0a684c] via-[#022840] to-[#09624b]
+}
+
+.contenedor-informacion-contact{
+    @apply relative mx-auto w-full max-w-[1280px] px-4 md:px-8 lg:px-8 h-full
+    
+}

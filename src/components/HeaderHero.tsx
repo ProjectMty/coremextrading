@@ -33,6 +33,15 @@ export default function HeaderHero() {
     return () => clearTimeout(t);
   }, []);
 
+  // Cambia valor al hacer scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 600);
+
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
 
     <section className='fondo-section'>
@@ -59,6 +68,7 @@ export default function HeaderHero() {
 
         {/* Nav links */}
         <nav className={[
+          scrolled ? 'hidden' : 'block',
           'contenedor-links-navbar',
           mounted ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2',
         ].join(' ')}
@@ -74,9 +84,9 @@ export default function HeaderHero() {
               {item.label}
             </a>
           ))}
-         
-        </nav>
 
+        </nav>
+<button ></button>
         <div className="lg:hidden p-2 rounded-md">
           <button
             onClick={() => setMobileMenuOpen(true)}
@@ -90,7 +100,7 @@ export default function HeaderHero() {
       <Transition show={mobileMenuOpen} as={Fragment}>
         <Dialog
           as="div"
-          className="lg:hidden"
+          className="block"
           onClose={setMobileMenuOpen}
         >
           {/* Fondo oscuro */}
@@ -139,7 +149,7 @@ export default function HeaderHero() {
                     {item.label}
                   </a>
                 ))}
-       
+
               </div>
             </Dialog.Panel>
           </Transition.Child>
@@ -147,6 +157,7 @@ export default function HeaderHero() {
       </Transition>
 
 
+      {/* #region HERO */}
       <div className='fondo-titulo'>
         <div
           className={['contenedor-titulo-hero',
@@ -191,7 +202,7 @@ export default function HeaderHero() {
         width={300}
         height={300}
         className='img-planeta' />
-
+      {/* #endregion */}
     </section>
   );
 }
