@@ -42,7 +42,7 @@ export default function Resources() {
           />
         </div>
         <div className="contenedor-grid2-resources">
-          <h1 className="titulo-grid2-resources">Resources</h1>
+          <h1 className="titulo-grid2-resources">RESOURCES</h1>
           <p className="subtitulo-grid2-resources">Count on OUR resources and infrastructure to
             work for you!</p>
 

@@ -7,7 +7,7 @@
 }
 
 .fondo-titulo{
-    @apply bg-gradient-to-br from-[#032e42] via-[#032e42] via-20%  to-[#0f9655] h-[700px] w-[85%]
+    @apply bg-gradient-to-br from-[#032e42] via-[#032e42] via-20%  to-[#0f9655] h-[600px] w-[95%]
     rounded-br-[400px] shadow-[10px_10px_20px_rgba(0,0,0,0.75)] 
 }
 /* #endregion */
@@ -17,7 +17,7 @@
 }
 
 .navbar{
-    @apply flex items-start justify-around drop-shadow-[0_1px_6px_rgba(0,0,0,0.35)]
+    @apply flex items-center justify-around drop-shadow-[0_1px_6px_rgba(0,0,0,0.35)]
      fixed w-full py-3 px-[5%] z-50 bg-white/0
 }
 
@@ -25,6 +25,9 @@
     @apply  items-start gap-0 
 }
 
+.img-navbar{
+    @apply h-10  w-auto select-none
+}
 .contenedor-links-navbar{
     @apply  hidden w-0
 }
@@ -40,7 +43,178 @@
 /* #endregion */
 /* #region TITULO */
 .contenedor-titulo-hero{
-    @apply py-[22%] pl-[28%]  max-w-[95%] text-white transition-all duration-700
+    @apply py-[25%] pl-[15%]  max-w-[80%] text-white transition-all duration-700
+}
+
+.contenedor-text-titulo-hero{
+    @apply text-[30px]  font-semibold leading-[120%]
+}
+
+.texto-titulo-hero{
+    @apply block transition-all duration-700 will-change-transform
+}
+
+.contenedor-subtitulo-hero{
+    @apply mt-3 md:mt-5
+}
+
+.subtitulo-hero{
+    @apply text-white/90 text-[16px] font-extralight transition-all duration-700
+}
+/* #endregion */
+/* #region PANEL */
+.contenedor-panle-navbar{
+    @apply fixed inset-y-0 right-0 z-50 w-2/4 max-w-sm bg-[#023042]/90 p-6 px-10 shadow-xl
+}
+
+.panel-navbar{
+    @apply flex items-center justify-end
+}
+
+.icon-xmark-navbar{
+    @apply h-10 w-10 text-white
+}
+
+.contenedor-links-panel-navbar{
+    @apply mt-16 flex flex-col items-end space-y-4
+}
+
+.link-panel-navbar{
+    @apply text-[20px] font-light text-white
+}
+/* #endregion */
+
+@media (min-width: 500px) {
+    /* #region FONDO */
+.fondo-section{
+    @apply bg-gradient-to-r from-[#064846] via-[#022941] via-50% to-[#09604b] min-h-[800px] font-[poppins]
+     
+}
+
+.fondo-titulo{
+    @apply bg-gradient-to-br from-[#032e42] via-[#032e42] via-20%  to-[#0f9655] h-[700px] w-[90%]
+    rounded-br-[400px] shadow-[10px_10px_20px_rgba(0,0,0,0.75)] 
+}
+/* #endregion */
+/* #region NAVBAR */
+.img-planeta{
+    @apply  absolute right-[15%] scale-[140%] top-[35%]
+}
+
+.navbar{
+    @apply flex items-center justify-around drop-shadow-[0_1px_6px_rgba(0,0,0,0.35)]
+     fixed w-full py-3 px-[0%] z-50 bg-white/0
+}
+
+.logo-navbar{
+    @apply  items-start gap-0 
+}
+
+.img-navbar{
+    @apply h-10  w-auto select-none
+}
+.contenedor-links-navbar{
+    @apply  hidden w-0
+}
+
+.link-navbar{
+    @apply  text-white/90 hover:text-white text-[15px] font-light transition-colors
+    
+}
+.botton-login{
+    @apply text-white border-white border-2 rounded-[20px] py-1 px-5 
+}
+
+/* #endregion */
+/* #region TITULO */
+.contenedor-titulo-hero{
+    @apply py-[20%] pl-[15%]  max-w-[90%] text-white transition-all duration-700
+}
+
+.contenedor-text-titulo-hero{
+    @apply text-[35px]  font-semibold leading-[130%]
+}
+
+.texto-titulo-hero{
+    @apply block transition-all duration-700 will-change-transform
+}
+
+.contenedor-subtitulo-hero{
+    @apply mt-6
+}
+
+.subtitulo-hero{
+    @apply text-white/90 text-[20px] font-extralight transition-all duration-700
+}
+/* #endregion */
+/* #region PANEL */
+.contenedor-panle-navbar{
+    @apply fixed inset-y-0 right-0 z-50 w-2/4 max-w-sm bg-[#023042]/90 p-6 px-10 shadow-xl
+}
+
+.panel-navbar{
+    @apply flex items-center justify-end
+}
+
+.icon-xmark-navbar{
+    @apply h-10 w-10 text-white
+}
+
+.contenedor-links-panel-navbar{
+    @apply mt-16 flex flex-col items-end space-y-4
+}
+
+.link-panel-navbar{
+    @apply text-[25px] font-light text-white
+}
+/* #endregion */
+
+}
+
+@media (min-width: 1024px) {
+    /* #region FONDO */
+.fondo-section{
+    @apply bg-gradient-to-r from-[#064846] via-[#022941] via-50% to-[#09604b] h-full font-[poppins]
+     
+}
+
+.fondo-titulo{
+    @apply bg-gradient-to-br from-[#032e42] via-[#032e42] via-20%  to-[#0f9655] h-[700px] w-[75%]
+    rounded-br-[400px] shadow-[10px_10px_20px_rgba(0,0,0,0.75)] 
+}
+/* #endregion */
+/* #region NAVBAR */
+.img-planeta{
+    @apply  absolute right-[10%] scale-[140%] top-[50%]
+}
+
+.navbar{
+    @apply flex  justify-around drop-shadow-[0_1px_6px_rgba(0,0,0,0.35)]
+     fixed w-[100%] py-3 px-[0%] z-50 bg-white/0
+}
+
+.logo-navbar{
+    @apply flex items-start gap-[10px] transition-all duration-700
+}
+.img-navbar{
+    @apply h-10  w-auto select-none
+}
+.contenedor-links-navbar{
+    @apply  flex items-center gap-[50px] transition-all duration-700 
+}
+
+.link-navbar{
+    @apply relative text-white/90 hover:text-white text-[18px] font-light transition-colors
+    
+}
+.botton-login{
+    @apply text-white border-white border-2 rounded-[20px] py-1 px-5 
+}
+
+/* #endregion */
+/* #region TITULO */
+.contenedor-titulo-hero{
+    @apply py-[22%] pl-[10%]  max-w-[95%] text-white transition-all duration-700
 }
 
 .contenedor-text-titulo-hero{
@@ -59,12 +233,31 @@
     @apply text-white/90 text-[16px] md:text-[35px] font-extralight transition-all duration-700
 }
 /* #endregion */
-
-@media (min-width: 500px) {
-    
+/* #region PANEL */
+.contenedor-panle-navbar{
+    @apply fixed inset-y-0 right-0 z-50 w-2/4 max-w-sm bg-[#023042]/90 p-6 px-10 shadow-xl
 }
 
-@media (min-width: 1024px) {
+.panel-navbar{
+    @apply flex items-center justify-end
+}
+
+.icon-xmark-navbar{
+    @apply h-10 w-10 text-white
+}
+
+.contenedor-links-panel-navbar{
+    @apply mt-16 flex flex-col items-end space-y-4
+}
+
+.link-panel-navbar{
+    @apply text-[20px] font-light text-white
+}
+/* #endregion */
+
+}
+
+@media (min-width: 1500px) {
     /* #region FONDO */
 .fondo-section{
     @apply bg-gradient-to-r from-[#064846] via-[#022941] via-50% to-[#09604b] h-full font-[poppins]
@@ -82,20 +275,22 @@
 }
 
 .navbar{
-    @apply  flex items-stretch justify-around drop-shadow-[0_1px_6px_rgba(0,0,0,0.35)]
-     fixed w-[100%] py-3 px-[5%] z-50 bg-white/0
+    @apply flex  justify-around drop-shadow-[0_1px_6px_rgba(0,0,0,0.35)]
+     absolute w-[100%] py-3 px-[6%] z-50 bg-white/0
 }
 
 .logo-navbar{
     @apply flex items-start gap-[10px] transition-all duration-700
 }
-
+.img-navbar{
+    @apply h-12  w-auto select-none
+}
 .contenedor-links-navbar{
     @apply  flex items-center gap-[50px] transition-all duration-700 
 }
 
 .link-navbar{
-    @apply relative text-white/90 hover:text-white text-[15px] font-light transition-colors
+    @apply relative text-white/90 hover:text-white text-[18px] font-light transition-colors
     
 }
 .botton-login{
@@ -105,11 +300,11 @@
 /* #endregion */
 /* #region TITULO */
 .contenedor-titulo-hero{
-    @apply py-[22%] pl-[28%]  max-w-[95%] text-white transition-all duration-700
+    @apply py-[15%] pl-[32%]  max-w-[95%] text-white transition-all duration-700
 }
 
 .contenedor-text-titulo-hero{
-    @apply text-[30px] md:text-[50px] lg:text-[47px] font-semibold leading-[110%]
+    @apply text-[50px] font-semibold leading-[110%]
 }
 
 .texto-titulo-hero{
@@ -117,16 +312,119 @@
 }
 
 .contenedor-subtitulo-hero{
-    @apply mt-3 md:mt-4
+    @apply mt-4
 }
 
 .subtitulo-hero{
-    @apply text-white/90 text-[16px] md:text-[35px] font-extralight transition-all duration-700
+    @apply text-white/90 text-[35px] font-extralight transition-all duration-700
+}
+/* #endregion */
+/* #region PANEL */
+.contenedor-panle-navbar{
+    @apply fixed inset-y-0 right-0 z-50 w-2/4 max-w-sm bg-[#023042]/90 p-6 px-10 shadow-xl
+}
+
+.panel-navbar{
+    @apply flex items-center justify-end
+}
+
+.icon-xmark-navbar{
+    @apply h-10 w-10 text-white
+}
+
+.contenedor-links-panel-navbar{
+    @apply mt-16 flex flex-col items-end space-y-4
+}
+
+.link-panel-navbar{
+    @apply text-[20px] font-light text-white
 }
 /* #endregion */
 
 }
 
 @media (min-width: 2000px) {
+       /* #region FONDO */
+.fondo-section{
+    @apply bg-gradient-to-r from-[#064846] via-[#022941] via-50% to-[#09604b] h-full font-[poppins]
+     
+}
+
+.fondo-titulo{
+    @apply bg-gradient-to-br from-[#032e42] via-[#032e42] via-20%  to-[#0f9655] h-[700px] w-[60%]
+    rounded-br-[400px] shadow-[10px_10px_20px_rgba(0,0,0,0.75)] 
+}
+/* #endregion */
+/* #region NAVBAR */
+.img-planeta{
+    @apply  absolute right-[25%] scale-[200%] top-[25%]
+}
+
+.navbar{
+    @apply  flex items-stretch justify-around drop-shadow-[0_1px_6px_rgba(0,0,0,0.35)]
+     absolute w-[100%] py-3 px-[18%] z-50 bg-white/0
+}
+
+.logo-navbar{
+    @apply flex items-start gap-[10px] transition-all duration-700
+}
+.img-navbar{
+    @apply h-14 w-auto select-none
+}
+.contenedor-links-navbar{
+    @apply  flex items-center gap-[50px] transition-all duration-700 
+}
+
+.link-navbar{
+    @apply relative text-white/90 hover:text-white text-[20px] font-light transition-colors
     
+}
+.botton-login{
+    @apply text-white border-white border-2 rounded-[20px] py-1 px-5 
+}
+
+/* #endregion */
+/* #region TITULO */
+.contenedor-titulo-hero{
+    @apply py-[15%] pl-[45%]  max-w-[95%] text-white transition-all duration-700
+}
+
+.contenedor-text-titulo-hero{
+    @apply text-[50px] font-semibold leading-[110%]
+}
+
+.texto-titulo-hero{
+    @apply block transition-all duration-700 will-change-transform
+}
+
+.contenedor-subtitulo-hero{
+    @apply mt-4
+}
+
+.subtitulo-hero{
+    @apply text-white/90 text-[35px] font-extralight transition-all duration-700
+}
+/* #endregion */
+/* #region PANEL */
+.contenedor-panle-navbar{
+    @apply fixed inset-y-0 right-0 z-50 w-2/4 max-w-sm bg-[#023042]/90 p-6 px-10 shadow-xl
+}
+
+.panel-navbar{
+    @apply flex items-center justify-end
+}
+
+.icon-xmark-navbar{
+    @apply h-10 w-10 text-white
+}
+
+.contenedor-links-panel-navbar{
+    @apply mt-16 flex flex-col items-end space-y-4
+}
+
+.link-panel-navbar{
+    @apply text-[20px] font-light text-white
+}
+/* #endregion */
+ 
 }

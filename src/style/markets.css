@@ -1,9 +1,15 @@
 @reference "tailwindcss";
 
+/* #region CONTENEDOR */
 .section-markets{
     @apply relative py-2 mb-14 content-center
 }
 
+.titulo-section-markets{
+    @apply relative z-[2] pt-4 mb-4 text-center font-medium tracking-wide
+    text-[28px] text-white
+    drop-shadow-[0_6px_16px_rgba(0,0,0,0.35)] 
+}
 .contenedor-fondo-markets{
     @apply relative z-0  
      min-h-[520px] 
@@ -12,19 +18,22 @@
 
 .contenedor-gradiente-arriba-markets{
     @apply  bg-gradient-to-br from-[#0f9655] via-[#022640] via-60% to-[#064c47]
-     h-full py-10 rounded-t-[40px] mx-[20%] grid grid-cols-4
+     h-full py-10 rounded-t-[40px] mx-[0%] grid grid-cols-1
 }
 .contenedor-izq-markets{
-    @apply py-5 
+    @apply py-5 hidden
 }
 
 .contenedor-der-markets{
-    @apply col-span-3 z-[1] px-10
+    @apply col-span-3 z-[1] px-1 mx-5
 }
+
+/* #endregion */
+/* #region ROWS */
 .titulo-markets{
-    @apply  left-0 right-0 text-white font-bold leading-[1.15] mb-5
+    @apply  text-center text-white font-bold leading-[1.15] mb-5 mt-5
     drop-shadow-[0_6px_16px_rgba(0,0,0,0.35)]
-    text-[clamp(13px,1.6vw,25px)] max-w-[min(52ch,760px)]
+    text-[clamp(17px,1.6vw,25px)] max-w-[min(52ch,760px)]
 }
 
 .contenedor-row-markets{
@@ -32,17 +41,17 @@
 }
 
 .circulo-markets{
-    @apply rounded-full  h-4 w-4 mx-0.5;
-    
+    @apply rounded-full h-2 w-2 mx-[1%];
 }
 
 .img-bandera-markets{
-    @apply mx-2 p-1
+    @apply mx-1 p-1
 }
 
 .estado-markets{
     @apply font-medium text-[clamp(13px,1.5vw,25px)]
 }
+/* #endregion */
 /* #region FLECHA */
 
 
@@ -66,3 +75,229 @@
     @apply absolute bottom-0 left-0 w-full h-0.5 -rotate-45 origin-left 
 }
 /* #endregion */
+
+@media (min-width: 500px) {
+    /* #region CONTENEDOR */
+.section-markets{
+    @apply relative py-2 mb-14 content-center
+}
+
+.titulo-section-markets{
+    @apply relative z-[2] pt-4 mb-4 text-center font-medium tracking-wide
+    text-[30px] text-white
+    drop-shadow-[0_6px_16px_rgba(0,0,0,0.35)] 
+}
+.contenedor-fondo-markets{
+    @apply relative z-0  
+     min-h-[520px] 
+    bg-gradient-to-br from-[#0a6a4c] via-[#022740] via-40% to-[#09664c]
+}
+
+.contenedor-gradiente-arriba-markets{
+    @apply  bg-gradient-to-br from-[#0f9655] via-[#022640] via-60% to-[#064c47]
+     h-full py-5 rounded-t-[40px] mx-[10%] grid grid-cols-1
+}
+.contenedor-izq-markets{
+    @apply py-5 hidden
+}
+
+.contenedor-der-markets{
+    @apply col-span-3 z-[1] px-1 mx-8
+}
+
+/* #endregion */
+/* #region ROWS */
+.titulo-markets{
+    @apply  text-center text-white font-bold leading-[1.15] mb-5 mt-5
+    drop-shadow-[0_6px_16px_rgba(0,0,0,0.35)]
+    text-[clamp(17px,1.6vw,25px)] max-w-[min(52ch,760px)] mx-[10%]
+}
+
+.contenedor-row-markets{
+    @apply bg-white rounded-[40px] h-[10%] flex content-center text-center items-center justify-center my-2
+}
+
+.circulo-markets{
+    @apply rounded-full h-3 w-3 mx-0.5;
+}
+
+.img-bandera-markets{
+    @apply mx-2 p-1
+}
+
+.estado-markets{
+    @apply font-medium text-[clamp(15px,1.5vw,25px)]
+}
+/* #endregion */
+
+}
+
+@media (min-width: 1024px) {
+    /* #region CONTENEDOR */
+.section-markets{
+    @apply relative py-2 mb-14 content-center
+}
+.titulo-section-markets{
+    @apply relative z-[2] pt-4 mb-4 text-center font-medium tracking-wide text-white
+                       drop-shadow-[0_6px_16px_rgba(0,0,0,0.35)]
+                       text-[clamp(22px,3.2vw,44px)]
+        
+}
+.contenedor-fondo-markets{
+    @apply relative z-0  
+     min-h-[520px] 
+    bg-gradient-to-br from-[#0a6a4c] via-[#022740] via-40% to-[#09664c]
+}
+
+.contenedor-gradiente-arriba-markets{
+    @apply  bg-gradient-to-br from-[#0f9655] via-[#022640] via-60% to-[#064c47]
+     h-full py-10 rounded-t-[40px] mx-[1%] grid grid-cols-4 
+}
+.contenedor-izq-markets{
+    @apply py-5 block translate-x-10
+}
+
+.contenedor-der-markets{
+    @apply col-span-3 z-[1] px-15
+}
+
+/* #endregion */
+/* #region ROWS */
+.titulo-markets{
+    @apply  left-0 right-0 text-start text-white font-bold leading-[1.15] mb-5
+    drop-shadow-[0_6px_16px_rgba(0,0,0,0.35)]
+    text-[clamp(13px,1.6vw,25px)] max-w-[min(52ch,760px)]
+}
+
+.contenedor-row-markets{
+    @apply bg-white rounded-[40px] h-[10%] flex content-center text-center items-center justify-center my-2
+}
+
+.circulo-markets{
+    @apply rounded-full  h-4 w-4 mx-0.5;
+    
+}
+
+.img-bandera-markets{
+    @apply mx-2 p-1
+}
+
+.estado-markets{
+    @apply font-medium text-[clamp(13px,1.5vw,25px)]
+}
+/* #endregion */
+
+}
+@media (min-width: 1500px) {
+        /* #region CONTENEDOR */
+.section-markets{
+    @apply relative py-2 mb-14 content-center
+}
+.titulo-section-markets{
+    @apply relative z-[2] pt-4 mb-4 text-center font-medium tracking-wide text-white
+                       drop-shadow-[0_6px_16px_rgba(0,0,0,0.35)]
+                       text-[clamp(22px,3.2vw,44px)]
+        
+}
+.contenedor-fondo-markets{
+    @apply relative z-0  
+     min-h-[520px] 
+    bg-gradient-to-br from-[#0a6a4c] via-[#022740] via-40% to-[#09664c]
+}
+
+.contenedor-gradiente-arriba-markets{
+    @apply  bg-gradient-to-br from-[#0f9655] via-[#022640] via-60% to-[#064c47]
+     h-full py-10 rounded-t-[40px] mx-[20%] grid grid-cols-4 
+}
+.contenedor-izq-markets{
+    @apply py-5 block translate-x-10
+}
+
+.contenedor-der-markets{
+    @apply col-span-3 z-[1] px-15
+}
+
+/* #endregion */
+/* #region ROWS */
+.titulo-markets{
+    @apply  left-0 right-0 text-start text-white font-bold leading-[1.15] mb-5
+    drop-shadow-[0_6px_16px_rgba(0,0,0,0.35)] -translate-x-15
+    text-[clamp(13px,1.6vw,25px)] max-w-[min(52ch,760px)]
+}
+
+.contenedor-row-markets{
+    @apply bg-white rounded-[40px] h-[10%] flex content-center text-center items-center justify-center my-2
+}
+
+.circulo-markets{
+    @apply rounded-full  h-4 w-4 mx-0.5;
+    
+}
+
+.img-bandera-markets{
+    @apply mx-2 p-1
+}
+
+.estado-markets{
+    @apply font-medium text-[clamp(13px,1.5vw,25px)]
+}
+/* #endregion */
+
+}
+
+@media (min-width: 2000px) {
+            /* #region CONTENEDOR */
+.section-markets{
+    @apply relative py-2 mb-14 content-center
+}
+.titulo-section-markets{
+    @apply relative z-[2] pt-4 mb-4 text-center font-medium tracking-wide text-white
+                       drop-shadow-[0_6px_16px_rgba(0,0,0,0.35)]
+                       text-[clamp(22px,3.2vw,44px)]
+        
+}
+.contenedor-fondo-markets{
+    @apply relative z-0  
+     min-h-[520px] 
+    bg-gradient-to-br from-[#0a6a4c] via-[#022740] via-40% to-[#09664c]
+}
+
+.contenedor-gradiente-arriba-markets{
+    @apply  bg-gradient-to-br from-[#0f9655] via-[#022640] via-60% to-[#064c47]
+     h-full py-10 rounded-t-[40px] mx-[27%] grid grid-cols-4 
+}
+.contenedor-izq-markets{
+    @apply py-5 block translate-x-10
+}
+
+.contenedor-der-markets{
+    @apply col-span-3 z-[1] px-15
+}
+
+/* #endregion */
+/* #region ROWS */
+.titulo-markets{
+    @apply  left-0 right-0 text-start text-white font-bold leading-[1.15] mb-5
+    drop-shadow-[0_6px_16px_rgba(0,0,0,0.35)] -translate-x-15
+    text-[clamp(13px,1.6vw,25px)] max-w-[min(52ch,760px)]
+}
+
+.contenedor-row-markets{
+    @apply bg-white rounded-[40px] h-[10%] flex content-center text-center items-center justify-center my-2
+}
+
+.circulo-markets{
+    @apply rounded-full  h-4 w-4 mx-0.5;
+    
+}
+
+.img-bandera-markets{
+    @apply mx-2 p-1
+}
+
+.estado-markets{
+    @apply font-medium text-[clamp(13px,1.5vw,25px)]
+}
+/* #endregion */
+
+}

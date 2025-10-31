@@ -19,6 +19,7 @@ export default function Markets() {
   const Circulos = ({ color = "" }) => {
     return (
       <div className="flex justify-center content-center items-center">
+        {/* CAMBIAR CANTIDAD DE CIRCULOS DEPENDIENDO TMÑO PANTALLA */}
         {Array.from({ length: 15 }).map((_, index) => (
           <div key={index} className= "circulo-markets" style={{ backgroundColor: color }} ></div>
         ))}
@@ -60,10 +61,7 @@ export default function Markets() {
       <div className="contenedor-fondo-markets">
         {/* Título */}
         <h2
-          className="relative z-[2] mb-3 md:mb-4 text-center font-extrabold tracking-wide text-white
-                       drop-shadow-[0_6px_16px_rgba(0,0,0,0.35)]
-                       text-[clamp(22px,3.2vw,44px)]"
-        >
+          className="titulo-section-markets">
           MARKETS AND SHIPPING LANES
         </h2>
 
