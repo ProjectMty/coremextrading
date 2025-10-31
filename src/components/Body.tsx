@@ -58,7 +58,7 @@ export default function Body() {
                 sizes="(min-width: 768px) 580px, 100vw"
                 className={[
                   "object-contain md:object-right pointer-events-none select-none",
-                  "translate-x-[6px] translate-y-[10px] md:translate-x-[-70px] md:translate-y-[10px]",
+                  "img-capsula-body-1",
                   mounted ? "opacity-100 scale-100" : "opacity-0 scale-[0.98]",
                   "",
                 ].join(" ")}
@@ -94,7 +94,7 @@ export default function Body() {
                 className={[
                   "object-contain object-left md:object-center pointer-events-none select-none",
                   // si quieres microajustes, descomenta y ajusta:
-                  // "translate-x-[10px] translate-y-[6px] md:translate-x-[60px] md:translate-y-[-20px]",
+                  "img-capsula-body-2",
                   mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-[6px]",
                   "transform-body",
                 ].join(" ")}

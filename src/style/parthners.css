@@ -2,11 +2,53 @@
 
 .contenedor-fondo-parth{
     @apply bg-gradient-to-b from-[#0e8e53] via-[#022740] to-[#0e8e53]
-    h-[70%] mx-[20%] rounded-[60px] grid grid-cols-5 p-5
+    h-[100%] mx-[0%] rounded-[60px] grid grid-cols-1 p-5
+}
+
+.logo-hover-path{
+    @apply  px-1 
+    transition duration-300 ease-in-out
+    content-center
+}
+
+.carrusel-parth{
+    @apply flex h-full w-full items-center justify-center px-10 
+}
+.carrusel-movil {
+    @apply  h-[80%] w-full block z-50 items-center justify-center 
+}
+
+.carrusel-desktop {
+    @apply hidden
+}
+@media (min-width: 500px){
+
+}
+@media (min-width: 1024px){
+.contenedor-fondo-parth{
+    @apply bg-gradient-to-b from-[#0e8e53] via-[#022740] to-[#0e8e53]
+     rounded-[60px] mx-[20%] h-[70%] 
+}
+.contenedor-parth{
+    @apply relative mx-auto w-full max-w-[3000px]  aspect-[2080/450]      
+        
 }
 
 .logo-hover-path{
     @apply  px-6 brightness-10 invert  hover:brightness-100 hover:invert-0
     transition duration-300 ease-in-out
     content-center
+}
+.carrusel-parth{
+    @apply flex h-full w-full items-center justify-center gap-10 px-10;
+}
+.carrusel-movil {
+    @apply hidden
+}
+.carrusel-desktop {
+    @apply  grid grid-cols-5 p-5
+}
+}
+@media (min-width: 2000px){
+
 }

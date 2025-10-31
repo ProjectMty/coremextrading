@@ -61,7 +61,7 @@ export default function HeaderHero() {
             width={180}
             height={40}
             priority
-            className="h-7 md:h-8 lg:h-12 w-auto select-none"
+            className= {mobileMenuOpen ? "hidden" : "img-navbar"}
           />
           <span className="sr-only">CoreMex Trading</span>
         </Link>
@@ -126,24 +126,24 @@ export default function HeaderHero() {
             leaveFrom="translate-x-0 opacity-100"
             leaveTo="translate-x-full opacity-0"
           >
-            <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-3/4 max-w-sm bg-white/80 p-6 shadow-xl">
-              <div className="flex items-center justify-end">
+            <Dialog.Panel className="contenedor-panle-navbar">
+              <div className="panel-navbar">
 
                 <button
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-blue-900"
                   aria-label="Cerrar menú"
                 >
-                  <XMarkIcon className="h-10 w-10" />
+                  <XMarkIcon className="icon-xmark-navbar" />
                 </button>
               </div>
 
-              <div className="mt-6 space-y-4">
+              <div className="contenedor-links-panel-navbar">
                 {NAV.map((item, i) => (
                   <a
                     key={item.href}
                     href={item.href}
-                    className="link-navbar"
+                    className="link-panel-navbar"
                     style={{ transitionDelay: `${220 + i * 80}ms` }}
                   >
                     {item.label}

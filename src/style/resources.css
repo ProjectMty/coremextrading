@@ -11,7 +11,7 @@
 }
 
 .contenedor-grid1-resources{
-    @apply w-[90%] h-[100%] flex items-center
+    @apply w-[90%] h-[100%] flex items-center mx-5
 }
 
 .contenedor-grid2-resources{
@@ -22,22 +22,22 @@
 
 /* #region GRID 2 */
 .titulo-grid2-resources{
-    @apply text-start text-[#006a7a] font-bold pl-20
+    @apply text-start text-[#006a7a] font-bold pl-10
     text-[35px] 
 }
 
 .subtitulo-grid2-resources{
-    @apply text-[25px]  font-normal pl-20 w-[100%]
+    @apply text-[20px]  font-normal pl-10 w-[100%]
 }
 
 .contenedor-paso-grid2-resources{
-    @apply h-[70px] rounded-[40px] 
+    @apply h-[50%] rounded-[40px] 
     shadow-[5px_5px_10px_rgba(0,0,0,0.3)] w-[80%] 
-    my-3 flex items-center
+    my-2 flex items-center py-1
 }
 
 .label-grid2-resources{
-    @apply text-white text-[21px] pl-5 font-semibold px-5
+    @apply text-white text-[15px] pl-10 font-semibold px-5
 }
 /* #endregion */
 
@@ -48,11 +48,11 @@
 }
 
 .contenedor-flecha-resources{
-    @apply flex items-center justify-center content-center my-3 
+    @apply flex items-center justify-center content-center my-1 
 }
 
 .linea-flecha-resources{
-    @apply h-1 w-10  flex translate-x-5 
+    @apply h-1 w-8  flex translate-x-5 
 }
 
 .contenedor-triangulo-resources{
@@ -70,6 +70,47 @@
 
 @media (min-width: 500px) {
     
+/* #region CONTENEDOR */
+.section-resources{
+    @apply relative py-5 w-full h-full font-[poppins]
+}
+
+.contenedor-fondo-resources{
+    @apply 
+    grid grid-cols-1 mx-[5%]
+}
+
+.contenedor-grid1-resources{
+    @apply w-[90%] h-[90%] flex items-center mx-5
+}
+
+.contenedor-grid2-resources{
+    @apply col-span-1 w-[100%] translate-x-0 mt-5
+}
+
+/* #endregion */
+
+/* #region GRID 2 */
+.titulo-grid2-resources{
+    @apply text-start text-[#006a7a] font-bold pl-20
+    text-[35px] 
+}
+
+.subtitulo-grid2-resources{
+    @apply text-[25px]  font-normal pl-20 w-[80%]
+}
+
+.contenedor-paso-grid2-resources{
+    @apply h-[50%] rounded-[40px] 
+    shadow-[5px_5px_10px_rgba(0,0,0,0.3)] w-[80%] 
+    my-2 flex items-center py-3
+}
+
+.label-grid2-resources{
+    @apply text-white text-[18px] pl-10 font-semibold px-5
+}
+/* #endregion */
+
 }
 
 @media (min-width: 1024px) {
@@ -80,11 +121,11 @@
 
 .contenedor-fondo-resources{
     @apply 
-    grid grid-cols-3 mx-[5%]
+    grid grid-cols-3 mx-[0%]
 }
 
 .contenedor-grid1-resources{
-    @apply w-[120%] h-[90%] flex items-end
+    @apply w-[130%] h-[60%] flex items-start -translate-x-10
 }
 
 .contenedor-grid2-resources{
@@ -96,21 +137,21 @@
 /* #region GRID 2 */
 .titulo-grid2-resources{
     @apply text-start text-[#006a7a] font-medium pl-20
-    text-[28px] md:text-[50px] 
+    text-[50px] 
 }
 
 .subtitulo-grid2-resources{
-    @apply text-[28px]  font-normal pl-20 w-[80%]
+    @apply text-[20px]  font-normal pl-20 w-[90%]
 }
 
 .contenedor-paso-grid2-resources{
-    @apply h-[70px] rounded-[40px] 
+    @apply h-[30%] rounded-[40px] 
     shadow-[5px_5px_10px_rgba(0,0,0,0.3)] w-[80%] 
     my-3 flex items-center
 }
 
 .label-grid2-resources{
-    @apply text-white text-[21px] pl-5 font-semibold px-5
+    @apply text-white text-[18px] pl-5 font-semibold px-5
 }
 /* #endregion */
 
@@ -143,6 +184,90 @@
 
 }
 
+@media (min-width: 1500px) {
+    /* #region CONTENEDOR */
+.section-resources{
+    @apply relative py-5 w-full h-full font-[poppins]
+}
+
+.contenedor-fondo-resources{
+    @apply 
+    grid grid-cols-3 mx-[10%]
+}
+
+.contenedor-grid1-resources{
+    @apply w-[120%] h-[80%] flex items-start -translate-x-20
+}
+
+.contenedor-grid2-resources{
+    @apply col-span-2 w-[80%] translate-x-25 -mt-20
+}
+
+/* #endregion */
+
+/* #region GRID 2 */
+.titulo-grid2-resources{
+    @apply text-start text-[#006a7a] font-medium pl-20
+    text-[50px] 
+}
+
+.subtitulo-grid2-resources{
+    @apply text-[20px]  font-normal pl-20 w-[90%]
+}
+
+.contenedor-paso-grid2-resources{
+    @apply h-[30%] rounded-[40px] 
+    shadow-[5px_5px_10px_rgba(0,0,0,0.3)] w-[80%] 
+    my-3 flex items-center
+}
+
+.label-grid2-resources{
+    @apply text-white text-[18px] pl-5 font-semibold px-5
+}
+/* #endregion */
+
+
+}
 @media (min-width: 2000px) {
-    
+        /* #region CONTENEDOR */
+.section-resources{
+    @apply relative py-5 w-full h-full font-[poppins]
+}
+
+.contenedor-fondo-resources{
+    @apply 
+    grid grid-cols-3 mx-[10%]
+}
+
+.contenedor-grid1-resources{
+    @apply w-[110%] h-[80%] flex items-start translate-x-25
+}
+
+.contenedor-grid2-resources{
+    @apply col-span-2 w-[65%] translate-x-45 -mt-20
+}
+
+/* #endregion */
+
+/* #region GRID 2 */
+.titulo-grid2-resources{
+    @apply text-start text-[#006a7a] font-medium pl-20
+    text-[50px] 
+}
+
+.subtitulo-grid2-resources{
+    @apply text-[23px]  font-normal pl-20 w-[90%]
+}
+
+.contenedor-paso-grid2-resources{
+    @apply h-[30%] rounded-[40px] 
+    shadow-[5px_5px_10px_rgba(0,0,0,0.3)] w-[80%] 
+    my-3 flex items-center py-3
+}
+
+.label-grid2-resources{
+    @apply text-white text-[18px] pl-5 font-semibold px-5
+}
+/* #endregion */
+
 }

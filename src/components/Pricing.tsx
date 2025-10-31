@@ -151,7 +151,7 @@ export default function Pricing() {
 
       {/* Carrusel */}
       <div
-        className="relative mx-auto mt-6 md:mt-8 w-full max-w-[980px] overflow-visible select-none"
+        className="relative mx-auto mt-6 md:mt-8 w-full max-w-[980px] overflow-hidden lg:overflow-visible select-none"
         style={{
           height: `clamp(${CARD.height.base}px, 52vw, ${CARD.height.md}px)`,
         }}
