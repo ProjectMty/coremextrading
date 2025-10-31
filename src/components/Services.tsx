@@ -2,25 +2,29 @@
 
 import { useEffect, useState } from 'react';
 import "@/style/services.css";
+import Image from 'next/image';
 
 type ServiceCard = {
   bg: string;      // color de fondo
   label: string;   // texto encima
   bgClass?: string;
+  icon?: string;
 };
 
 const ITEMS: ServiceCard[] = [
-  { bg: '#006a7a', label: 'Receive parcels from US marketplaces and retailers' },
-  { bg: '#007972', label: 'Package consolidation' },
-  { bg: '#008866', label: 'Customs clearance into Mexico' },
+  { bg: '#006a7a', label: 'Receive parcels from US marketplaces and retailers', icon:'/img/services/Div3.1.svg' },
+  { bg: '#007972', label: 'Package consolidation', icon:'/img/services/Div3.2.svg' },
+  { bg: '#008866', label: 'Customs clearance into Mexico', icon:'/img/services/Div3.3.svg' },
   {
     bg: '#007972',
     label: 'Label, prep, and deliver to last mile carrier for final delivery to client',
+    icon:'/img/services/Div3.4.svg'
   },
   {
     bg: '#006a7a',
     label:
       'Returns logistics: we receive your returns in Mexico and complete reverse logistics to return back to the USA.',
+      icon:'/img/services/Div3.5.svg'
   },
 ];
 
@@ -76,6 +80,14 @@ export default function Services() {
                     aria-hidden
                   />
 
+                  <Image
+                  src={item.icon || '/img/services/Div3.1.svg'}
+                  alt=""
+                  fill
+                  className="object-contain pointer-events-none select-none"
+                  sizes="(min-width: 768px) 33vw, 92vw"
+                  
+                  />
                   {/* Texto encima */}
                   <p
                     className="texto-tarjeta-services"

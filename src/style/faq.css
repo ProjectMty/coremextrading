@@ -1,0 +1,16 @@
+@reference "tailwindcss";
+
+.fondo-degradado{
+    @apply bg-gradient-to-r from-[#064746] via-[#022640] to-[#0f9655]
+}
+
+.fondo-degradado-arriba-faq{
+    @apply bg-gradient-to-br from-[#0f9655] via-[#054345] to-[#022a41]
+    py-10 rounded-t-[40px] mt-10
+}
+
+.titulo-section-faq{
+    @apply text-[22px] md:text-[45px] font-bold text-center
+    px-[20%]
+}
+

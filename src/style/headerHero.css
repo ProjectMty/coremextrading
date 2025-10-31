@@ -17,7 +17,7 @@
 }
 
 .navbar{
-    @apply items-start justify-around drop-shadow-[0_1px_6px_rgba(0,0,0,0.35)]
+    @apply flex items-start justify-around drop-shadow-[0_1px_6px_rgba(0,0,0,0.35)]
      fixed w-full py-3 px-[5%] z-50 bg-white/0
 }
 
@@ -82,16 +82,16 @@
 }
 
 .navbar{
-    @apply  flex items-center justify-around drop-shadow-[0_1px_6px_rgba(0,0,0,0.35)]
+    @apply  flex items-stretch justify-around drop-shadow-[0_1px_6px_rgba(0,0,0,0.35)]
      fixed w-[100%] py-3 px-[5%] z-50 bg-white/0
 }
 
 .logo-navbar{
-    @apply flex items-center gap-[10px] transition-all duration-700
+    @apply flex items-start gap-[10px] transition-all duration-700
 }
 
 .contenedor-links-navbar{
-    @apply  flex items-end gap-[50px] transition-all duration-700 
+    @apply  flex items-center gap-[50px] transition-all duration-700 
 }
 
 .link-navbar{
