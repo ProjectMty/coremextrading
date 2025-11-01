@@ -28,7 +28,7 @@ export default function EnvioDatos({
                         <Section className=" text-center mb-6">
                             <Img
                                 src="https://coremextrading.com/_next/image?url=%2Fimg%2Fhero%2Fplaneta.png&w=384&q=75"
-                                width="200"
+                                width="100"
                                 height="100"
                                 alt="CoreMex logo"
                                 className="my-0 mx-auto"
