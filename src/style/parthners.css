@@ -2,11 +2,11 @@
 
 .contenedor-fondo-parth{
     @apply bg-gradient-to-b from-[#0e8e53] via-[#022740] to-[#0e8e53]
-    h-[100%] mx-[0%] rounded-[60px] grid grid-cols-1 p-5
+    h-[100%] mx-[0%] rounded-[60px] grid grid-cols-1 p-1
 }
 
 .logo-hover-path{
-    @apply  px-1 
+    @apply  px-10  
     transition duration-300 ease-in-out
     content-center
 }
@@ -15,7 +15,7 @@
     @apply flex h-full w-full items-center justify-center px-10 
 }
 .carrusel-movil {
-    @apply  h-[80%] w-full block z-50 items-center justify-center 
+    @apply translate-y-[50%] mx-[10%] h-[50%] w-full block z-50 items-center justify-center content-center
 }
 
 .carrusel-desktop {

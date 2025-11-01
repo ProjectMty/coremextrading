@@ -12,7 +12,7 @@ import Amazon from "@/assets/partnership/Amazon.png"
 import Walmart from "@/assets/partnership/walmart.png"
 import MercadoLibreLogo from "@/assets/partnership/mercado.png";
 import Estafeta from "@/assets/partnership/estafeta.png";
-import PaqueteExpress from "@/assets/partnership/paqueteExpress.png";
+import PaqueteExpress from "@/assets/partnership/paqueteExpress2.png";
 import TresGuerrasLogo from "@/assets/partnership/tres-guerras.png";
 import EnviaLogo from "@/assets/partnership/envia.png";
 import FedexLogo from "@/assets/partnership/fedex.png";
@@ -36,8 +36,8 @@ const parthners = [
     id:3,
     name: MercadoLibreLogo,
     href: "https://mercadolibre.com",
-     width: 400,
-    height: 400
+     width: 100,
+    height: 100
   },
   {
     id:4,
