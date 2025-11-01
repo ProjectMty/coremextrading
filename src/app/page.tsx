@@ -8,6 +8,7 @@ import GetStarted from '@/components/GetStarted';
 import Contact from '@/components/Contact';
 import Body from '@/components/Body';
 import Partners from '@/components/Partners';
+import Formulario from '@/components/Formulario';
 
 
 export default function HomePage() {
@@ -24,7 +25,7 @@ export default function HomePage() {
       <Pricing />
       <FAQ />
       <GetStarted />
-    
+    <Formulario />
       <Contact />
     </main>
   );

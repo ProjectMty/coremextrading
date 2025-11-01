@@ -1,0 +1,28 @@
+@reference "tailwindcss";
+
+.contenedor-carrusel-pricing{
+    @apply relative mx-auto mt-6  w-full 
+    max-w-[580px] overflow-hidden select-none scale-90 -translate-y-10
+}
+
+.pila-carrusel-pricing{
+    @apply translate-y-[350%] inset-0 flex items-center justify-center py-10
+    scale-70
+    
+}
+
+
+@media (min-width: 1024px){
+.contenedor-carrusel-pricing{
+    @apply relative mx-auto mt-8 w-full 
+    max-w-[980px] overflow-visible select-none translate-y-0 scale-100
+    mb-10
+}
+.pila-carrusel-pricing{
+    @apply translate-y-[0%] absolute inset-0 flex items-center justify-center py-0 scale-100
+}
+}
+
+@media (min-width: 2000px){
+
+}

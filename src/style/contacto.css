@@ -1,0 +1,171 @@
+@reference "tailwindcss";
+    /* #region CONTENEDOR */
+.section-contactanos {
+    @apply z-0 relative w-[100%] scroll-mt-20 font-[poppins] mx-auto
+        justify-center items-center py-5 bg-white scroll-smooth text-white
+}
+
+.titulo-contatanos{
+    @apply font-bold text-[30px] text-center relative mt-5 text-[#006a7a]
+}
+.contenedor-der{
+    @apply bg-gradient-to-tr from-[#0a684c] via-[#022840] to-[#09624b]
+     justify-center items-center   text-[20px] rounded-[20px]
+     mt-10 mb-20 w-[100%] h-full relative mx-auto p-5
+}
+
+.contenedor-forms{
+    @apply w-full  
+}
+
+
+.contenedor-filas-2 {
+  @apply  mt-5 
+}
+/* #endregion */
+
+
+/* #region imputs */
+.label {
+  @apply text-[16px] font-medium text-start content-start text-white
+}
+
+.input {
+  @apply bg-[#FFFFFF] text-[16px] text-black rounded-[15px] w-[100%] h-[60px];
+}
+
+.input:focus {
+  @apply ring-2 ring-blue-300 outline-none transition-all duration-300
+}
+
+.button-forms{
+    @apply w-full h-[40px]  bg-[#0e9254] mt-10 rounded-[10px] font-medium mb-10
+    hover:bg-white hover:text-[#0e9254]  text-white transition duration-300 text-center;
+}
+
+/* #endregion  */
+
+@media (min-width: 500px){
+    /* #region CONTENEDOR */
+.section-contactanos {
+    @apply z-0 relative w-[100%] scroll-mt-20 font-[poppins] mx-auto
+        justify-center items-center py-5 bg-white scroll-smooth text-white
+}
+
+.titulo-contatanos{
+    @apply font-bold text-[35px] text-center relative mt-5 text-[#006a7a]
+}
+.contenedor-der{
+    @apply bg-gradient-to-tr from-[#0a684c] via-[#022840] to-[#09624b]
+     justify-center items-center   text-[20px] rounded-[20px]
+     mt-10 mb-20 w-[100%] h-full relative mx-auto p-10
+}
+
+.contenedor-forms{
+    @apply w-full  
+}
+
+
+.contenedor-filas-2 {
+  @apply  mt-5 
+}
+/* #endregion */
+
+
+/* #region imputs */
+.label {
+  @apply text-[16px] font-medium text-start content-start text-white
+}
+
+.input {
+  @apply bg-[#FFFFFF] text-[16px] text-black rounded-[15px] w-[100%] h-[60px];
+}
+
+.input:focus {
+  @apply ring-2 ring-blue-300 outline-none transition-all duration-300
+}
+
+.button-forms{
+    @apply w-[50%] h-[40px]  bg-[#0e9254] mt-10 rounded-[10px] font-medium mb-10
+    hover:bg-white hover:text-[#0e9254]  text-white transition duration-300 text-center;
+}
+
+/* #endregion  */
+
+}
+
+@media (min-width: 1024px){
+    /* #region CONTENEDOR */
+.section-contactanos {
+    @apply z-0 relative w-[100%] scroll-mt-20 font-[poppins] mx-auto
+        justify-center items-center py-5 bg-white scroll-smooth text-white
+}
+
+.titulo-contatanos{
+    @apply font-bold text-[50px] text-center relative mt-5 text-[#006a7a]
+}
+.contenedor-der{
+    @apply bg-gradient-to-tr from-[#0a684c] via-[#022840] to-[#09624b]
+     justify-center items-center   text-[20px] rounded-[40px]
+     mt-10 mb-20 w-[61%] h-full relative mx-auto p-10 
+}
+
+.contenedor-forms{
+    @apply w-full  
+}
+
+
+.contenedor-filas-2 {
+  @apply  mt-5 
+}
+/* #endregion */
+
+/* #region imputs */
+.label {
+  @apply text-[16px] font-medium text-start content-start text-white
+}
+
+.input {
+  @apply bg-[#FFFFFF] text-[16px] text-black rounded-[15px] w-[100%] h-[60px];
+}
+
+.input:focus {
+  @apply ring-2 ring-blue-300 outline-none transition-all duration-300
+}
+
+.button-forms{
+    @apply w-[50%] h-[40px]  bg-[#0e9254] mt-10 rounded-[10px] font-medium mb-10 mx-[25%]
+    hover:bg-white hover:text-[#0e9254]  text-white transition duration-300 text-center;
+}
+
+/* #endregion  */
+}
+
+
+@media (min-width: 2000px){
+    /* #region CONTENEDOR */
+.section-contactanos {
+    @apply z-0 relative w-[100%] scroll-mt-20 font-[poppins] mx-auto
+        justify-center items-center py-5 bg-white scroll-smooth text-white
+}
+
+.titulo-contatanos{
+    @apply font-bold text-[50px] text-center relative mt-5 text-[#006a7a]
+}
+.contenedor-der{
+    @apply bg-gradient-to-tr from-[#0a684c] via-[#022840] to-[#09624b]
+     justify-center items-center   text-[20px] rounded-[40px]
+     mt-10 mb-20 w-[47%] h-full relative mx-auto p-10 
+}
+
+.contenedor-forms{
+    @apply w-full  
+}
+
+
+.contenedor-filas-2 {
+  @apply  mt-5 
+}
+/* #endregion */
+
+}
