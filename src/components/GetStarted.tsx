@@ -62,11 +62,12 @@ export default function GetStarted() {
       </h2>
 
       <div
-        className="reveal relative mx-auto mt-6 md:mt-8 rounded-[26px] shadow-[0_16px_30px_rgba(0,0,0,0.35)]"
+        className="reveal relative mx-auto mt-6 md:mt-8 rounded-[26px] shadow-[0_16px_30px_rgba(0,0,0,0.35)]
+        bg-gradient-to-r from-[#0f9855] via-[#022740]  to-[#0f9655]"
         style={{
           maxWidth: STRIP.maxW,
           padding: `${STRIP.padY.base}px ${STRIP.padX.base}px`,
-          background: STRIP.gradient,
+         
         }}
       >
         {/* incrementa suavemente el padding en md */}

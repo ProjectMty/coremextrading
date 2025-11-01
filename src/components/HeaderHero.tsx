@@ -26,22 +26,13 @@ export default function HeaderHero() {
   const [mounted, setMounted] = useState(false);
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const t = setTimeout(() => setMounted(true), 50);
     return () => clearTimeout(t);
   }, []);
 
-  // Cambia valor al hacer scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 600);
 
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
   return (
 
     <section className='fondo-section'>
@@ -68,7 +59,6 @@ export default function HeaderHero() {
 
         {/* Nav links */}
         <nav className={[
-          scrolled ? 'hidden' : 'block',
           'contenedor-links-navbar',
           mounted ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2',
         ].join(' ')}

@@ -30,8 +30,7 @@
      rounded-[60px] mx-[20%] h-[70%] 
 }
 .contenedor-parth{
-    @apply relative mx-auto w-full max-w-[3000px]  aspect-[2080/450]      
-        
+    @apply relative mx-auto w-full max-w-[3000px]  aspect-[2080/450]          
 }
 
 .logo-hover-path{

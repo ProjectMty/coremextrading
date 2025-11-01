@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
-
+import "@/style/pricing.css"
 /** Rutas de las tarjetas (en /public/img/pricing/) */
 const slides = [
   "/img/pricing/prc1.png",
@@ -151,7 +151,7 @@ export default function Pricing() {
 
       {/* Carrusel */}
       <div
-        className="relative mx-auto mt-6 md:mt-8 w-full max-w-[980px] overflow-hidden lg:overflow-visible select-none"
+        className="contenedor-carrusel-pricing"
         style={{
           height: `clamp(${CARD.height.base}px, 52vw, ${CARD.height.md}px)`,
         }}
@@ -159,7 +159,7 @@ export default function Pricing() {
         onTouchEnd={onTouchEnd}
       >
         {/* Pila centrada */}
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="pila-carrusel-pricing">
           {items.map(({ key, src, x, scale, z, opacity, filter }, idx) => (
             <div
               key={key}
