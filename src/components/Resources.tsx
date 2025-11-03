@@ -1,6 +1,12 @@
 // src/components/Resources.tsx
+'use client';
+
 import Image from "next/image";
 import "@/style/resources.css";
+import { useHoverAnimation } from "@/animate/useHoverAnimation";
+import { useEffect, useState, Fragment, useRef } from 'react';
+import ShowAnimation from "@/animate/showAnimate";
+
 
 type cardRow = {
   bg: string;
@@ -24,30 +30,66 @@ const ITEMS: cardRow[] = [
       'Vast network of local industry contacts, suppliers, and service providers',
   },
 ];
+const REVEAL = {
+  baseDelay: 120, // ms
+  step: 250,       // ms por tarjeta
+};
 
 export default function Resources() {
   // Ajusta estos números a la razón de aspecto real del SVG.
   // Mira el viewBox del SVG (por ejemplo, "0 0 1920 960" -> usa aspect-[1920/960]).
+  const { ref, ScaleEnter, ScaleLeave } = useHoverAnimation(null, false);
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    const t = setTimeout(() => setMounted(true), 50);
+    return () => clearTimeout(t);
+  }, []);
+
   return (
     <section id="resources" className="section-resources">
       <div className="contenedor-fondo-resources">
         <div className="contenedor-grid1-resources">
           <Image
+            ref={ref}
             src="/img/resources/location.png"
             alt="Resources img"
             width={600}
             height={600}
-            className="h-full w-full"
-
+            className="img-grid1-resources"
+            onMouseEnter={ScaleEnter}
+            onMouseLeave={ScaleLeave}
           />
         </div>
-        <div className="contenedor-grid2-resources">
-          <h1 className="titulo-grid2-resources">RESOURCES</h1>
-          <p className="subtitulo-grid2-resources">Count on OUR resources and infrastructure to
-            work for you!</p>
+        <div className="contenedor-grid2-resources group">
+          <ShowAnimation
+            lines={[
+              <h2 className="titulo-grid2-resources">
+                RESOURCES
+              </h2>]}
+          >
+          </ShowAnimation>
+
+          <ShowAnimation
+            delay={350}
+            lines={[
+              <h2 className="subtitulo-grid2-resources">
+                Count on OUR resources and infrastructure to
+                work for you!
+              </h2>]}
+          >
+          </ShowAnimation>
+
+
 
           {ITEMS.map((item, i) => (
-            <article key={i} className="flex flex-cols-2 px-2">
+            <article key={i}
+              className={['contenedor-paso-resource transition-all duration-1000',
+                mounted ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-3',
+              ].join(' ')}
+              
+            >
               <div className="contenedor-flecha-resources">
                 <div className="linea-flecha-resources shadow-flecha-resources"
                   style={{ backgroundColor: item.bg }}></div>

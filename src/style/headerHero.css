@@ -13,7 +13,9 @@
 /* #endregion */
 /* #region NAVBAR */
 .img-planeta{
-    @apply  absolute right-[5%] scale-[100%] top-[40%]
+    @apply  absolute right-[5%] scale-[100%] top-[40%];
+    opacity: 0;
+  transform: scale(0.9);
 }
 
 .navbar{
@@ -269,7 +271,7 @@
 /* #endregion */
 /* #region NAVBAR */
 .img-planeta{
-    @apply  absolute right-[20%] scale-[180%] top-[20%]
+    @apply  absolute right-[15%] scale-[180%] top-[15%]
 }
 
 .navbar{
@@ -355,7 +357,7 @@
 /* #endregion */
 /* #region NAVBAR */
 .img-planeta{
-    @apply  absolute right-[25%] scale-[200%] top-[25%]
+    @apply  absolute right-[25%] scale-[200%] top-[20%]
 }
 
 .navbar{

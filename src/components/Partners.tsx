@@ -10,7 +10,7 @@ import { Autoplay, Pagination } from 'swiper/modules';
 
 import Amazon from "@/assets/partnership/Amazon.png"
 import Walmart from "@/assets/partnership/walmart.png"
-import MercadoLibreLogo from "@/assets/partnership/mercado.png";
+import MercadoLibreLogo from "@/assets/partnership/mercadolibre-logo.png";
 import Estafeta from "@/assets/partnership/estafeta.png";
 import PaqueteExpress from "@/assets/partnership/paqueteExpress2.png";
 import TresGuerrasLogo from "@/assets/partnership/tres-guerras.png";
@@ -21,14 +21,14 @@ const parthners = [
   {
     id:1,
     name: Amazon,
-    href: "https://Amazon.com",
+    href: "https://www.amazon.com.mx/",
     width: 800,
     height: 600
   },
   {
     id:2,
     name: Walmart,
-    href: "https://Walmart.com",
+    href: "https://www.walmart.com.mx/",
      width: 800,
     height: 600
   },
@@ -49,28 +49,28 @@ const parthners = [
   {
     id:5,
     name: PaqueteExpress,
-    href: "https://PaqueteExpress.com",
+    href: "https://www.paquetexpress.com.mx/",
      width: 300,
     height: 100
   },
   {
     id:6,
     name: TresGuerrasLogo,
-    href: "https://TresGuerrasLogo.com",
+    href: "https://www.tresguerras.com.mx/",
      width: 800,
     height: 600
   },
   {
     id:7,
     name: EnviaLogo,
-    href: "https://EnviaLogo.com",
+    href: "https://envia.com/es-MX",
      width: 800,
     height: 600
   },
   {
     id:8,
     name: FedexLogo,
-    href: "https://FedexLogo.com",
+    href: "https://www.fedex.com/",
      width: 800,
     height: 600
   },

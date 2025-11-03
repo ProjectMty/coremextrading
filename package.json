@@ -12,6 +12,7 @@
     "@heroicons/react": "^2.2.0",
     "@react-email/components": "^0.5.7",
     "@react-email/render": "^1.4.0",
+    "animejs": "^4.2.2",
     "axios": "^1.13.1",
     "framer-motion": "^12.23.24",
     "next": "15.5.4",

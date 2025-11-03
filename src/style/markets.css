@@ -25,9 +25,14 @@
 }
 
 .contenedor-der-markets{
-    @apply col-span-3 z-[1] px-1 mx-5
+    @apply col-span-3 z-[1] px-1 mx-5 
 }
 
+.img-flecha-izq{
+    @apply   h-full w-full;
+    opacity: 0;
+    transform: scale(0.9);
+}
 /* #endregion */
 /* #region ROWS */
 .titulo-markets{
@@ -38,6 +43,8 @@
 
 .contenedor-row-markets{
     @apply bg-white rounded-[40px] h-[10%] flex content-center text-center items-center justify-center my-2
+     transition-all duration-300 
+    group-hover:opacity-40 hover:opacity-100 hover:scale-110 hover:z-10
 }
 
 .circulo-markets{

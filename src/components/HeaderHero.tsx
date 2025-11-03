@@ -1,12 +1,13 @@
 'use client';
 
-import { useEffect, useState, Fragment } from 'react';
+import { useEffect, useState, Fragment, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image'; // ⬅️ IMPORTANTE
-import SectionBG from './SectionBG';
 import "@/style/headerHero.css"
 import { Dialog, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { useHoverAnimation } from "@/animate/useHoverAnimation";
+
 
 const NAV = [
   { label: 'Home', href: '/' },
@@ -24,8 +25,8 @@ const TITLE_LINES = [
 
 export default function HeaderHero() {
   const [mounted, setMounted] = useState(false);
-
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { ref, ScaleEnter, ScaleLeave } = useHoverAnimation(null, false);
 
   useEffect(() => {
     const t = setTimeout(() => setMounted(true), 50);
@@ -52,7 +53,7 @@ export default function HeaderHero() {
             width={180}
             height={40}
             priority
-            className= {mobileMenuOpen ? "hidden" : "img-navbar"}
+            className={mobileMenuOpen ? "hidden" : "img-navbar"}
           />
           <span className="sr-only">CoreMex Trading</span>
         </Link>
@@ -76,7 +77,7 @@ export default function HeaderHero() {
           ))}
 
         </nav>
-<button ></button>
+        <button ></button>
         <div className="lg:hidden p-2 rounded-md">
           <button
             onClick={() => setMobileMenuOpen(true)}
@@ -186,12 +187,18 @@ export default function HeaderHero() {
           </div>
         </div>
       </div>
+
       <Image
+        ref={ref}
         src="/img/hero/planeta.png"
         alt="planeta"
         width={300}
         height={300}
-        className='img-planeta' />
+        className='img-planeta'
+        onMouseEnter={ScaleEnter}
+        onMouseLeave={ScaleLeave}
+      />
+
       {/* #endregion */}
     </section>
   );

@@ -2,6 +2,9 @@
 
 import { useState } from 'react';
 import "@/style/faq.css"
+import ShowAnimation from "@/animate/showAnimate";
+import { motion, AnimatePresence } from "framer-motion";
+
 type QAItem = { q: string; a: string };
 
 const QA: QAItem[] = [
@@ -56,14 +59,19 @@ export default function FAQ() {
       <div
         className="absolute inset-0 -z-10 fondo-degradado"
       />
-        <h2 className="titulo-section-faq">
-          THE MOST IMPORTANT THINGS TO KNOW AND THE REAL ANSWERS!
-        </h2>
+      <ShowAnimation
+        lines={[
+          <h2 className="titulo-section-faq">
+            THE MOST IMPORTANT THINGS TO KNOW AND THE REAL ANSWERS!
+          </h2>]}
+      >
+      </ShowAnimation>
+
       <div className="absolute inset-0 -z-10 bg-black/15 fondo-degradado" aria-hidden />
 
       {/* Contenedor centrado con ancho cómodo para texto largo */}
       <div className="site-container max-w-[1150px] mx-auto fondo-degradado-arriba-faq">
-      
+
 
         <div className="mt-6 space-y-4">
           {QA.map(({ q, a }, i) => (
@@ -117,12 +125,21 @@ export default function FAQ() {
                 </span>
               </summary>
 
-              <div className="px-5 md:px-6 pb-5 md:pb-6">
-                {/* Mantenemos saltos de línea del texto original */}
-                <p className="text-white/90 leading-relaxed whitespace-pre-line">
-                  {a}
-                </p>
-              </div>
+              <AnimatePresence initial={false}>
+                {openIndex === i && (
+                  <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="px-6 pb-4 text-sm "
+                      >
+                    <p className="text-white/90 leading-relaxed whitespace-pre-line">
+                      {a}
+                    </p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </details>
           ))}
         </div>
