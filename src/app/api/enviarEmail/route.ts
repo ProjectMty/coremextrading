@@ -15,7 +15,7 @@ export async function GET() {
 export async function POST(req: Request) {
     try {
         const destinatarios = [
-            "info@coremextrading.com",
+            "usamex@coremextrading.com",
             "issac@cargomty.com"
             // "it03@cargomty.com"
         ];

@@ -2,6 +2,8 @@
 
 import { useEffect } from 'react';
 import Image from 'next/image';
+import ShowAnimation from "@/animate/showAnimate";
+import { useHoverAnimation } from "@/animate/useHoverAnimation";
 
 /** ===== Knobs (ajústalos libremente) ===== */
 const STRIP = {
@@ -29,7 +31,7 @@ const ARROWS = {
 /** ===== Ajustes finos SOLO del texto por tarjeta ===== */
 const TEXT = {
   c1: { x: 0, y: -6, maxW: 280, align: 'center' as const }, // “Contact us today!”
-  c2: { x: 0, y:  0, maxW: 600, align: 'center' as const }, // párrafo
+  c2: { x: 0, y: 0, maxW: 600, align: 'center' as const }, // párrafo
   c3: { x: 0, y: -6, maxW: 280, align: 'center' as const }, // “Start shipping!”
 };
 
@@ -55,11 +57,30 @@ export default function GetStarted() {
     return () => io.disconnect();
   }, []);
 
+  const {
+    ref: ref1,
+    ScaleEnter: ScaleEnter1,
+    ScaleLeave: ScaleLeave1,
+  } = useHoverAnimation(null, false);
+
+  const {
+    ref: ref2,
+    ScaleEnter: ScaleEnter2,
+    ScaleLeave: ScaleLeave2,
+  } = useHoverAnimation(null, false);
+
+
   return (
     <section id="contact" className="py-10 md:py-14">
-      <h2 className="reveal text-center text-[28px] md:text-[50px] font-bold tracking-wide text-[#006a7a]">
-        HOW TO GET STARTED
-      </h2>
+      <ShowAnimation
+        delay={0}
+        lines={[
+          <h2 className="reveal text-center text-[28px] md:text-[50px] font-bold tracking-wide text-[#006a7a]">
+            HOW TO GET STARTED
+          </h2>]}
+      >
+      </ShowAnimation>
+
 
       <div
         className="reveal relative mx-auto mt-6 md:mt-8 rounded-[26px] shadow-[0_16px_30px_rgba(0,0,0,0.35)]
@@ -67,15 +88,14 @@ export default function GetStarted() {
         style={{
           maxWidth: STRIP.maxW,
           padding: `${STRIP.padY.base}px ${STRIP.padX.base}px`,
-         
+
         }}
       >
         {/* incrementa suavemente el padding en md */}
         <div
           style={{
-            padding: `${STRIP.padY.md - STRIP.padY.base}px ${
-              STRIP.padX.md - STRIP.padX.base
-            }px`,
+            padding: `${STRIP.padY.md - STRIP.padY.base}px ${STRIP.padX.md - STRIP.padX.base
+              }px`,
           }}
         >
           {/* 3 columnas en md+, stacked en mobile */}
@@ -84,14 +104,16 @@ export default function GetStarted() {
             <article
               className="reveal relative rounded-[18px] md:min-h-[190px]"
               style={{ minHeight: CARD.minH.base }}
-            >
-              <div className="relative w-full h-full">
+              >
+              <div className="relative w-full h-full"
+                >
                 <Image
                   src="/img/how/cuadro1.svg"
                   alt=""
                   fill
-                  className="object-contain pointer-events-none select-none"
+                  className="object-contain  select-none"
                   sizes="(min-width: 768px) 33vw, 92vw"
+
                   priority
                 />
               </div>
@@ -100,12 +122,13 @@ export default function GetStarted() {
               <div
                 className="absolute top-1/2 left-1/2"
                 style={{
-                  transform: `translate(calc(-50% + ${TEXT.c1.x}px), calc(-50% + ${
-                    TEXT.c1.y + CARD.textShiftY
-                  }px))`,
+                  transform: `translate(calc(-50% + ${TEXT.c1.x}px), calc(-50% + ${TEXT.c1.y + CARD.textShiftY
+                    }px))`,
                   maxWidth: TEXT.c1.maxW,
                   padding: `0 ${CARD.textPadX.base}px`,
                 }}
+               
+                
               >
                 <h3
                   className={[
@@ -141,9 +164,8 @@ export default function GetStarted() {
               <div
                 className="absolute top-1/2 left-1/2"
                 style={{
-                  transform: `translate(calc(-50% + ${TEXT.c2.x}px), calc(-50% + ${
-                    TEXT.c2.y + CARD.textShiftY
-                  }px))`,
+                  transform: `translate(calc(-50% + ${TEXT.c2.x}px), calc(-50% + ${TEXT.c2.y + CARD.textShiftY
+                    }px))`,
                   maxWidth: TEXT.c2.maxW,
                   padding: `0 ${CARD.textPadX.base}px`,
                 }}
@@ -182,9 +204,8 @@ export default function GetStarted() {
               <div
                 className="absolute top-1/2 left-1/2"
                 style={{
-                  transform: `translate(calc(-50% + ${TEXT.c3.x}px), calc(-50% + ${
-                    TEXT.c3.y + CARD.textShiftY
-                  }px))`,
+                  transform: `translate(calc(-50% + ${TEXT.c3.x}px), calc(-50% + ${TEXT.c3.y + CARD.textShiftY
+                    }px))`,
                   maxWidth: TEXT.c3.maxW,
                   padding: `0 ${CARD.textPadX.base}px`,
                 }}

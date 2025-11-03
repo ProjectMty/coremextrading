@@ -18,12 +18,18 @@
     @apply col-span-1 w-[100%] translate-x-0 mt-10
 }
 
+.img-grid1-resources{
+    @apply h-full w-full;
+     opacity:0; 
+     transform:scale(0.9);
+}
 /* #endregion */
 
 /* #region GRID 2 */
 .titulo-grid2-resources{
     @apply text-start text-[#006a7a] font-bold pl-10
-    text-[35px] 
+    text-[35px];
+       
 }
 
 .subtitulo-grid2-resources{
@@ -33,12 +39,19 @@
 .contenedor-paso-grid2-resources{
     @apply h-[50%] rounded-[40px] 
     shadow-[5px_5px_10px_rgba(0,0,0,0.3)] w-[80%] 
-    my-2 flex items-center py-1
+    my-2 flex items-center py-1 
 }
 
 .label-grid2-resources{
     @apply text-white text-[15px] pl-10 font-semibold px-5
 }
+
+.contenedor-paso-resource{
+    @apply flex grid-cols-2 px-2 
+    transition-all duration-300 
+    group-hover:opacity-40 hover:opacity-100 hover:scale-110 hover:z-10
+}
+
 /* #endregion */
 
 /* #region FLECHA */

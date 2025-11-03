@@ -3,13 +3,30 @@
 import { useEffect, useState } from 'react';
 import Image from "next/image";
 import "@/style/body.css"
+import { useHoverAnimation } from "@/animate/useHoverAnimation";
+
+
 export default function Body() {
   const [mounted, setMounted] = useState(false);
 
+  const { 
+    ref: ref1,
+    ScaleEnter: ScaleEnter1,
+    ScaleLeave: ScaleLeave1,
+   } = useHoverAnimation(null, false);
+ 
+   const { 
+    ref: ref2,
+    ScaleEnter: ScaleEnter2,
+    ScaleLeave: ScaleLeave2,
+   } = useHoverAnimation(null, false);
+ 
   useEffect(() => {
     const t = setTimeout(() => setMounted(true), 50);
     return () => clearTimeout(t);
   }, []);
+
+
 
   return (
     <section id="about" className="section-body">
@@ -28,7 +45,7 @@ export default function Body() {
               The direct source for parcel shipping to Mexico at a fraction of the cost.
             </h3>
             <p className="acomodo-titulo-texto-body">
-              We are not a <span className='strong-text-color-body'>third party</span>, 
+              We are not a <span className='strong-text-color-body'>third party</span>,
               we are not a <span className='strong-text-color-body'>virtual warehouse</span>, and we are not a{" "}
               <span className='strong-text-color-body'>fancy software company</span>. We are the team that operates the warehouse in Texas, receives your
               packages, crosses the merchandise into Mexico, applies labels, and delivers your packages to the final carrier
@@ -52,17 +69,15 @@ export default function Body() {
               />
               {/* Ilustración (zoom-in sutil) */}
               <Image
+                ref={ref1}
                 src="/img/body/div2.1.svg"
-                alt=""
+                alt="imagen1"
                 fill
                 sizes="(min-width: 768px) 580px, 100vw"
-                className={[
-                  "object-contain md:object-right pointer-events-none select-none",
-                  "img-capsula-body-1",
-                  mounted ? "opacity-100 scale-100" : "opacity-0 scale-[0.98]",
-                  "",
-                ].join(" ")}
-                priority
+                className="img-capsula-body-1 fade-on-load"
+                onMouseEnter={ScaleEnter1}
+                onMouseLeave={ScaleLeave1}
+
               />
             </div>
           </div>
@@ -87,18 +102,13 @@ export default function Body() {
               />
               {/* Ilustración (levísimo slide) */}
               <Image
+                ref={ref2}
                 src="/img/body/div2.3.svg"
                 alt=""
                 fill
-              
-                className={[
-                  "object-contain object-left md:object-center pointer-events-none select-none",
-                  // si quieres microajustes, descomenta y ajusta:
-                  "img-capsula-body-2",
-                  mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-[6px]",
-                  "transform-body",
-                ].join(" ")}
-                priority
+                className="img-capsula-body-2"
+                onMouseEnter={ScaleEnter2}
+                onMouseLeave={ScaleLeave2}
               />
             </div>
           </div>
@@ -116,7 +126,7 @@ export default function Body() {
               the work.
             </p>
             <p className="acomodo-titulo-texto-body">
-              Obtain lower shipping costs when you bypass 
+              Obtain lower shipping costs when you bypass
               <span className='strong-text-color-body'> virtual teams</span> who are more than
               <span className='strong-text-color-body'> 10,000 kilometers</span> away from the packages!
             </p>

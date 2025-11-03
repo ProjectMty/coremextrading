@@ -2,7 +2,9 @@
 
 import { useEffect, useState } from 'react';
 import "@/style/services.css";
-import Image from 'next/image';
+
+import Card from "@/components/extras/card"
+import { useHoverAnimation } from "@/animate/useHoverAnimation";
 
 type ServiceCard = {
   bg: string;      // color de fondo
@@ -12,30 +14,34 @@ type ServiceCard = {
 };
 
 const ITEMS: ServiceCard[] = [
-  { bg: '#006a7a', label: 'Receive parcels from US marketplaces and retailers', icon:'/img/services/Div3.1.svg' },
-  { bg: '#007972', label: 'Package consolidation', icon:'/img/services/Div3.2.svg' },
-  { bg: '#008866', label: 'Customs clearance into Mexico', icon:'/img/services/Div3.3.svg' },
+  { bg: '#006a7a', label: 'Receive parcels from US marketplaces and retailers', icon: '/img/services/Div3.1.svg' },
+  { bg: '#007972', label: 'Package consolidation', icon: '/img/services/Div3.2.svg' },
+  { bg: '#008866', label: 'Customs clearance into Mexico', icon: '/img/services/Div3.3.svg' },
   {
     bg: '#007972',
     label: 'Label, prep, and deliver to last mile carrier for final delivery to client',
-    icon:'/img/services/Div3.4.svg'
+    icon: '/img/services/Div3.4.svg'
   },
   {
     bg: '#006a7a',
     label:
       'Returns logistics: we receive your returns in Mexico and complete reverse logistics to return back to the USA.',
-      icon:'/img/services/Div3.5.svg'
+    icon: '/img/services/Div3.5.svg'
   },
 ];
 
 // Knobs de animación
 const REVEAL = {
   baseDelay: 120, // ms
-  step: 90,       // ms por tarjeta
+  step: 200,       // ms por tarjeta
 };
+
 
 export default function Services() {
   const [mounted, setMounted] = useState(false);
+    const { ref, ScaleEnter, ScaleLeave
+   } = useHoverAnimation(null, false);
+ 
   useEffect(() => {
     const t = setTimeout(() => setMounted(true), 50);
     return () => clearTimeout(t);
@@ -56,45 +62,28 @@ export default function Services() {
           >
             SERVICES
           </h2>
+          <div className="contenedor-flecha-services"
+           ref={ref}
+                onMouseEnter={ScaleEnter}
+                onMouseLeave={ScaleLeave}
+          >
+            <div className="linea-flecha-services "></div>
+            <div className="contenedor-triangulo-services">
+              <div className="linea-arriba-flecha-services "></div>
+              <div className="linea-abajo-flecha-services "></div>
+            </div>
+          </div>
 
           <div className="mt-8">
             {/* Grid responsivo: auto-fit con tarjetas de 180–220px mínimo */}
             <div className="contenedor-tarjetas-services">
               {ITEMS.map((item, i) => (
-                <article
+                <Card
                   key={i}
-                  className={[
-                    'contenedor-tarjeta-services',
-                    'transform-body',
-                    mounted ? 'contenedor-entrada scale-100' : 'contenedor-salida scale-[0.98]',
-                  ].join(' ')}
-                  style={{ transitionDelay: `${REVEAL.baseDelay + (i + 1) * REVEAL.step}ms` }}
-                >
-                  {/* Fondo que cubre TODO y 1px extra para eliminar “hairline” */}
-                  <div
-                    className={[
-                      'fondo-tarjeta-services',
-                      item.bgClass ?? '',
-                    ].join(' ')}
-                    style={{ backgroundColor: item.bg }}
-                    aria-hidden
-                  />
-
-                  <Image
-                  src={item.icon || '/img/services/Div3.1.svg'}
-                  alt=""
-                  fill
-                  className="object-contain pointer-events-none select-none"
-                  sizes="(min-width: 768px) 33vw, 92vw"
-                  
-                  />
-                  {/* Texto encima */}
-                  <p
-                    className="texto-tarjeta-services"
-                  >
-                    {item.label}
-                  </p>
-                </article>
+                  item={item}
+                  delay={REVEAL.baseDelay + (i + 1) * REVEAL.step}
+                  mounted={mounted}
+                ></Card>
               ))}
             </div>
           </div>

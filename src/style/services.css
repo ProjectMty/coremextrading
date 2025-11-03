@@ -20,6 +20,7 @@
 
 .contenedor-tarjetas-services{
     @apply grid grid-cols-[repeat(auto-fit,minmax(180px,1fr))] gap-5 md:gap-7
+
 }
 
 .contenedor-tarjeta-services{
@@ -31,7 +32,7 @@
 }
 
 .fondo-tarjeta-services{
-    @apply absolute -inset-[1px] rounded-[22px] pointer-events-none select-none
+    @apply absolute -inset-[1px] rounded-[22px] select-none
 }
 
 .texto-tarjeta-services{
@@ -41,3 +42,36 @@
                     drop-shadow-[0_1px_1px_rgba(0,0,0,0.35)]
                   
 }
+
+
+/* #region FLECHA */
+
+.shadow-flecha-services{
+    @apply shadow-[0_5px_5px_rgba(0,0,0,0.3)]
+}
+
+.contenedor-flecha-services{
+    @apply flex items-center justify-center content-center my-1 
+    bg-[#0f9855] w-[70px] rounded-[20px] z-0 mx-[47%]
+    shadow-[7px_7px_5px_rgba(0,0,0,0.3)];
+     opacity: 0;
+    transform: scale(0.9);
+
+}
+
+.linea-flecha-services{
+    @apply h-0.5 w-4  flex translate-x-3.5 translate-y-1 bg-white z-10 -rotate-45
+}
+
+.contenedor-triangulo-services{
+    @apply relative w-4 h-12 
+}
+
+.linea-arriba-flecha-services{
+    @apply absolute top-2.5 left-0 w-6 h-0.5 rotate-90 origin-left bg-white 
+}
+
+.linea-abajo-flecha-services{
+    @apply absolute bottom-3 left-0 w-4 h-0.5 -rotate-135 origin-left bg-white 
+}
+/* #endregion */
