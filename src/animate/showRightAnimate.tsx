@@ -8,18 +8,18 @@ interface ShowProps{
 
 }
 
-export default function ShowAnimation({ lines = [], delay = 220}: ShowProps) {
+export default function ShowRightAnimation({ lines = [], delay = 220}: ShowProps) {
 const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const t = setTimeout(() => setMounted(true), 50);
+    const t = setTimeout(() => setMounted(true), 150);
     return () => clearTimeout(t);
   }, []);
 
     return (
         <div
-            className={['transition-all duration-700',
-                mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3',
+            className={['transition-all duration-1000',
+                mounted ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-5',
             ].join(' ')}
             style={{ transitionDelay: `${delay}ms` }}
         >

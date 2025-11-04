@@ -4,6 +4,8 @@ import "@/style/contacto.css";
 
 import { use, useState } from "react";
 import Swal from 'sweetalert2'
+import ShowAnimation from "@/animate/showAnimate";
+import ShowRightAnimation from "@/animate/showRightAnimate";
 
 export default function Formulario() {
     const [nombre, SetNombre] = useState("");
@@ -93,52 +95,65 @@ export default function Formulario() {
         <section id="contacto" className="w-full  h-full ">
             <div className="section-contactanos">
                 <div className="  z-10 ">
-                    <h1 className="titulo-contatanos">
-                        CONTACT US!
-                    </h1>
+                    <ShowAnimation
+                        delay={100}
+                        lines={[
+                            <h1 key={1} className="titulo-contatanos">
+                                CONTACT US!
+                            </h1>]}
+                    >
+                    </ShowAnimation>
+
 
                     {/* contenedor derecho */}
-                    <div className="contenedor-der">
+                    <ShowRightAnimation
+                        delay={200}
+                        lines={[
+                            <div key={1} className="contenedor-der">
 
-                        <div className="contenedor-filas-2">
-                            <label htmlFor="ContactName" className="label">NAME: </label>
-                            <input type="text" name="name" id="ContactName" className="input"
-                                value={nombre}
-                                placeholder="Nombre"
-                                onChange={(e) => SetNombre(e.target.value)} />
-                        </div>
+                                <div className="contenedor-filas-2">
+                                    <label htmlFor="ContactName" className="label">NAME: </label>
+                                    <input type="text" name="name" id="ContactName" className="input"
+                                        value={nombre}
+                                        placeholder="Nombre"
+                                        onChange={(e) => SetNombre(e.target.value)} />
+                                </div>
 
-                        <div className="contenedor-filas-2">
-                            <label htmlFor="ContactPhone" className="label">TELEPHONE NUMBER: </label>
-                            <input type="text" name="phone" id="ContactPhone" className="input"
-                                value={telefono}
-                                placeholder="(123) 456-7890"
-                                onChange={handleChangeTelefono} />
-                        </div>
+                                <div className="contenedor-filas-2">
+                                    <label htmlFor="ContactPhone" className="label">TELEPHONE NUMBER: </label>
+                                    <input type="text" name="phone" id="ContactPhone" className="input"
+                                        value={telefono}
+                                        placeholder="(123) 456-7890"
+                                        onChange={handleChangeTelefono} />
+                                </div>
 
-                        <div className="contenedor-filas-2">
+                                <div className="contenedor-filas-2">
 
-                            <label htmlFor="ContactEmail" className="label">EMAIL: </label>
-                            <input type="text" name="email" id="ContactEmail" className="input"
-                                value={correo}
-                                placeholder="Example@correo.com"
-                                onChange={(e) => SetCorreo(e.target.value)} />
-                        </div>
+                                    <label htmlFor="ContactEmail" className="label">EMAIL: </label>
+                                    <input type="text" name="email" id="ContactEmail" className="input"
+                                        value={correo}
+                                        placeholder="Example@correo.com"
+                                        onChange={(e) => SetCorreo(e.target.value)} />
+                                </div>
 
-                        <div className="contenedor-filas-2">
+                                <div className="contenedor-filas-2">
 
-                            <label htmlFor="ContactEmail" className="label">ADDITIONAL INFORMATION: </label>
-                            <input type="textarea" name="email" className="input"
-                                value={asunto}
-                                placeholder=""
-                                onChange={(e) => SetAsunto(e.target.value)} />
-                        </div>
+                                    <label htmlFor="ContactEmail" className="label">ADDITIONAL INFORMATION: </label>
+                                    <input type="textarea" name="email" className="input"
+                                        value={asunto}
+                                        placeholder=""
+                                        onChange={(e) => SetAsunto(e.target.value)} />
+                                </div>
 
-                        {/* boton pequeño */}
-                        <button className="button-forms" onClick={handleEnvioDatos}>
-                            SEND
-                        </button>
-                    </div>
+                                {/* boton pequeño */}
+                                <button className="button-forms" onClick={handleEnvioDatos}>
+                                    SEND
+                                </button>
+                            </div>
+                        ]}>
+
+                    </ShowRightAnimation>
+
 
 
                 </div>
