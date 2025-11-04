@@ -57,17 +57,6 @@ export default function GetStarted() {
     return () => io.disconnect();
   }, []);
 
-  const {
-    ref: ref1,
-    ScaleEnter: ScaleEnter1,
-    ScaleLeave: ScaleLeave1,
-  } = useHoverAnimation(null, false);
-
-  const {
-    ref: ref2,
-    ScaleEnter: ScaleEnter2,
-    ScaleLeave: ScaleLeave2,
-  } = useHoverAnimation(null, false);
 
 
   return (
@@ -75,7 +64,7 @@ export default function GetStarted() {
       <ShowAnimation
         delay={0}
         lines={[
-          <h2 className="reveal text-center text-[28px] md:text-[50px] font-bold tracking-wide text-[#006a7a]">
+          <h2 key={1} className="reveal text-center text-[28px] md:text-[50px] font-bold tracking-wide text-[#006a7a]">
             HOW TO GET STARTED
           </h2>]}
       >

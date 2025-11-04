@@ -30,10 +30,7 @@ const ITEMS: cardRow[] = [
       'Vast network of local industry contacts, suppliers, and service providers',
   },
 ];
-const REVEAL = {
-  baseDelay: 120, // ms
-  step: 250,       // ms por tarjeta
-};
+
 
 export default function Resources() {
   // Ajusta estos números a la razón de aspecto real del SVG.
@@ -65,7 +62,7 @@ export default function Resources() {
         <div className="contenedor-grid2-resources group">
           <ShowAnimation
             lines={[
-              <h2 className="titulo-grid2-resources">
+              <h2 key={1} className="titulo-grid2-resources">
                 RESOURCES
               </h2>]}
           >
@@ -74,7 +71,7 @@ export default function Resources() {
           <ShowAnimation
             delay={350}
             lines={[
-              <h2 className="subtitulo-grid2-resources">
+              <h2 key={1} className="subtitulo-grid2-resources">
                 Count on OUR resources and infrastructure to
                 work for you!
               </h2>]}

@@ -61,7 +61,7 @@ export default function FAQ() {
       />
       <ShowAnimation
         lines={[
-          <h2 className="titulo-section-faq">
+          <h2 key={1} className="titulo-section-faq">
             THE MOST IMPORTANT THINGS TO KNOW AND THE REAL ANSWERS!
           </h2>]}
       >

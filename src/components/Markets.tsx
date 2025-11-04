@@ -68,7 +68,7 @@ export default function Markets() {
         {/* Título */}
         <ShowAnimation
           lines={[
-            <h2 className="titulo-section-markets">
+            <h2 key={1} className="titulo-section-markets">
               MARKETS AND SHIPPING LANES
             </h2>]}
         >
@@ -96,7 +96,7 @@ export default function Markets() {
             <ShowAnimation
               delay={500}
               lines={[
-                <p className="titulo-markets">
+                <p key={1} className="titulo-markets">
                   Marketplace fulfillment Amazon, Mercado Libre, Walmart
                 </p>]}
             >
@@ -115,7 +115,7 @@ export default function Markets() {
             <ShowAnimation
               delay={800}
               lines={[
-                <p className="titulo-markets">
+                <p key={1} className="titulo-markets">
                   Direct to client parcel shipping
                 </p>]}
             >
