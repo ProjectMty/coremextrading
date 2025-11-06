@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Poppins } from 'next/font/google';
+import Script from "next/script";
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -19,8 +20,22 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={poppins.variable}>
-      {/* `font-poppins` es una clase que definimos en globals.css abajo */}
+          <head>
+        <Script
+          async 
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17707123576"
+        />
+        <Script id="google-ads-script" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17707123576');
+          `}
+        </Script>
+      </head>
       <body className="font-poppins main-wrap">
+       
         {children}
       </body>
     </html>
