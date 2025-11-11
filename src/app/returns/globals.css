@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+
+:root {
+  --background: oklch(100% 0.00011 271.152); /* 🔵 Fondo general del sitio con tu azul */
+  --foreground: #ffffff;                    /* Texto principal en blanco para contraste */
+
+  --green: #064846;   
+  --green-2: #022941;         
+  --green-3: #09604b;            
+
+  --primary: #032e42;
+  --secundary: #088054;
+}
+
+@theme {
+  --color-brand-green: #00A86B;
+  --color-brand-blue:  #0072CE;
+
+  --shadow-soft: 0 8px 30px rgba(0,0,0,0.06);
+  --container-max: 1160px; /* ajusta 1140–1180 para clavar guías */
+}
+
+/* Fondo general ya definido arriba si quieres */
+.site-container{
+  width:100%; max-width:var(--container-max);
+  margin-inline:auto; padding-inline:clamp(16px,3.6vw,28px);
+}
+
+.band{ position:relative; isolation:isolate; }
+.band::before{
+  content:""; position:absolute; inset:0; z-index:-1;
+  background: linear-gradient(135deg, #0B3E57 0%, #0A6F65 100%);
+}
+/* Solo flechas dentro de la sección #get-started */
+#get-started .arrow-bob {
+  animation: gs-arrow-bob 2s ease-in-out infinite;
+}
+
+/* Bob suave de 6px */
+@keyframes gs-arrow-bob {
+  0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+  50%      { transform: translate(-50%, -50%) translateY(-6px); }
+}
+/* Fade-up suave para Contact */
+/* Animación global reutilizable */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px) scale(.98);
+  will-change: opacity, transform;
+}
+.reveal.reveal--visible {
+  animation: contact-fade-up .65s cubic-bezier(.2,.65,.2,1) forwards;
+}
+@keyframes contact-fade-up {
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* (opcional) Respeto a “reduce motion” */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; animation: none !important; }
+}
+
+
+@keyframes contact-fade-up {
+  from { opacity: 0; transform: translateY(18px) scale(.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Respeta usuarios con reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  #contact .reveal { opacity: 1; transform: none; }
+  #contact .reveal.reveal--visible { animation: none; }
+}

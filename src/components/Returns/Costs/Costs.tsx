@@ -1,18 +1,17 @@
-'use client';
-
+"use client";
+import Section from '@/components/extras/section';
+import { Carousel, CarouselContent, CarouselItem } from '@/components/extras/carousel';
+import returnCostsData from '@/components/extras/return-cost-data';
+import { animateFadeIn } from '@/utils';
+import clsx from 'clsx';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import "@/components/Returns/Costs/Costs.css"
 import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import "@/style/pricing.css"
-/** Rutas de las tarjetas (en /public/img/pricing/) */
-const slides = [
-  "/img/pricing/prc1.png",
-  "/img/pricing/prc2.png",
-  "/img/pricing/prc3.png",
-  "/img/pricing/prc4.png",
-  "/img/pricing/prc5.png",
-  "/img/pricing/prc6.png",
-  "/img/pricing/prc7.png",
-];
+
+
 
 /** Ajustes del carrusel */
 const CARD = {
@@ -40,10 +39,10 @@ function mod(n: number, m: number) {
   return ((n % m) + m) % m;
 }
 
-export default function Pricing() {
+export default function Costs_Returns() {
   // NOTA: 'current' ahora es un índice VIRTUAL que puede crecer indefinidamente.
   const [current, setCurrent] = useState(0);
-  const total = slides.length;
+  const total = returnCostsData.length;
   const autoplayRef = useRef<NodeJS.Timeout | null>(null);
   const touch = useRef<{ x: number; y: number } | null>(null);
 
@@ -87,9 +86,11 @@ export default function Pricing() {
   /** Generamos la “ventana” alrededor del índice virtual */
   const items = useMemo(() => {
     const list: Array<{
-      src: string;
+      id: string;
       key: string;
-      offset: number;   // distancia relativa respecto al current (k)
+      top: any;
+      content: React.ReactNode;
+      offset: number;
       x: number;
       scale: number;
       z: number;
@@ -100,7 +101,7 @@ export default function Pricing() {
     for (let k = -RADIUS; k <= RADIUS; k++) {
       const virtualIndex = current + k;
       const realIndex = mod(virtualIndex, total);
-      const src = slides[realIndex];
+      const data = returnCostsData[realIndex];
 
       const abs = Math.abs(k);
       const z = 100 - abs;
@@ -112,16 +113,18 @@ export default function Pricing() {
         abs === 0
           ? OPACITY.center
           : abs === 1
-          ? OPACITY.near
-          : abs === 2
-          ? OPACITY.far
-          : OPACITY.hidden;
+            ? OPACITY.near
+            : abs === 2
+              ? OPACITY.far
+              : OPACITY.hidden;
 
-      const filter = abs === 0 ? "none" : "saturate(0.85) brightness(0.92)";
+      const filter = abs === 0 ? 'none' : 'saturate(0.85) brightness(0.92)';
 
       list.push({
-        src,
-        key: `${realIndex}-${virtualIndex}`, // clave estable y única
+        id: data.id,
+        key: `${realIndex}-${virtualIndex}`,
+        top: data.top,
+        content: data.content,
         offset: k,
         x,
         scale,
@@ -134,24 +137,22 @@ export default function Pricing() {
     return list;
   }, [current, total]);
 
-  return (
-    <section id="pricing" className="py-10 md:py-14 pb-24">
-      {/* Título */}
-      <div className="text-center">
-        <h2 className="text-[28px] md:text-[50px] font-bold text-[#006a7a]">
-          PRICING
-        </h2>
-        <p className="mt-1 text-sm md:text-base text-[#0a2a38]/80">
-          No hidden fees!
-        </p>
-        <p className="text-sm md:text-base text-[#0a2a38]/80">
-          These are the only fees you will pay!
-        </p>
-      </div>
 
-      {/* Carrusel */}
+  return (
+    <Section id='returns-cost' className='space-y-4' withPadding={false}>
       <div
-        className="contenedor-carrusel-pricing"
+        className="section-costsR"
+      >
+        <motion.h3 {...animateFadeIn} className='titulo-costsR'>
+          How much do returns cost?
+        </motion.h3>
+        <motion.p {...animateFadeIn} className='desc-costsR'>
+          While Core Mex offers several options for returns management, our most popular is the consolidate and return to seller model. We receive your returns on a daily basis, inform you of the inventory status, and consolidate. We ship back to you when you’re ready! 
+        </motion.p>
+       
+      </div>
+      <div
+        className="mt-30 relative"
         style={{
           height: `clamp(${CARD.height.base}px, 52vw, ${CARD.height.md}px)`,
         }}
@@ -159,15 +160,16 @@ export default function Pricing() {
         onTouchEnd={onTouchEnd}
       >
         {/* Pila centrada */}
-        <div className="pila-carrusel-pricing">
-          {items.map(({ key, src, x, scale, z, opacity, filter }, idx) => (
+        <div className="contenedor-carrusel-costsR relative flex items-center justify-center">
+          {items.map(({ id, top, content, x, scale, z, opacity, filter }, idx) => (
             <div
-              key={key}
+              key={id}
               className={`
-                absolute ${CARD.shadow}
-                transition-all duration-500 ease-[cubic-bezier(.2,.65,.2,1)]
-                will-change-transform rounded-[22px] pointer-events-none
-              `}
+          absolute ${CARD.shadow}
+          transition-all duration-500 ease-[cubic-bezier(.2,.65,.2,1)]
+          will-change-transform rounded-[22px] pointer-events-none
+          bg-gradient-to-br from-[#0f7050]/90 to-[#022641]/90 
+        `}
               style={{
                 width: CARD.w,
                 transform: `translateX(${x}px) scale(${scale})`,
@@ -176,16 +178,25 @@ export default function Pricing() {
                 filter,
               }}
             >
-              <Image
-                src={src}
-                alt={`Pricing card`}
-                width={CARD.w}
-                height={Math.round(CARD.w * 1.55)}
-                className="w-full h-auto rounded-[22px]"
-                draggable={false}
-                // Priorizamos la central (idx === RADIUS)
-                priority={idx === RADIUS}
-              />
+              <div className="select-none  rounded-[22px] overflow-hidden">
+                {/* Header */}
+                <div className="space-y-4  py-6 text-center text-white">
+                  <div className="text-2xl font-black uppercase">{top.title}</div>
+                  <div className="text-6xl font-bold">{top.cost}</div>
+                  <div className="text-xl font-bold">{top.type}</div>
+                </div>
+
+                {/* Contenido */}
+                <div className="flex min-h-[630px] flex-col items-center justify-between pb-6 text-white">
+                  <div>{content}</div>
+                  <Link
+                    href="/contact-us#form"
+                    className="boton-carrusel-costsR"
+                  >
+                    Started
+                  </Link>
+                </div>
+              </div>
             </div>
           ))}
         </div>
@@ -227,8 +238,11 @@ export default function Pricing() {
           </svg>
         </button>
       </div>
-    </section>
+    </Section>
   );
 }
+
+
+
 
 

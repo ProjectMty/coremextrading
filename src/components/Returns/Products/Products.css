@@ -1,0 +1,39 @@
+@reference "tailwindcss";
+
+.section-productsR{
+    @apply space-y-6 px-5 py-8 text-center   font-[poppins]
+    lg:space-y-7 lg:text-xl 2xl:space-y-8 2xl:py-32 2xl:text-2xl overflow-hidden
+}
+
+.bg-secondary{
+    @apply bg-[var(--secundary)]
+}
+.bg-primary{
+    @apply bg-[var(--primary)]
+}
+
+.text-primaryR{
+    @apply text-[#92c980]
+}
+
+.text-secondaryR{
+    @apply text-[#d4d4d4]
+}
+
+.titulo-productsR{
+    @apply text-2xl font-black lg:text-3xl 2xl:text-4xl
+}
+
+.contenedor-lista-productsR{
+    @apply grid w-2/3 gap-x-0 gap-y-4 lg:grid-cols-2 lg:gap-x-20 lg:text-xl 2xl:grid-cols-3 2xl:gap-x-32 2xl:gap-y-14 2xl:text-2xl
+}
+
+.contenedor-item-productsR{
+    @apply flex items-center gap-x-7
+}
+.img-item-productsR{
+    @apply h-[34px] w-[34px] rounded-full p-1 lg:h-[38px] lg:w-[38px] 2xl:h-[52px] 2xl:w-[52px]
+}
+.description-item-productsR{
+    @apply w-fit text-left 
+}

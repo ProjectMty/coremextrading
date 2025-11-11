@@ -1,0 +1,34 @@
+@reference "tailwindcss";
+
+.section-heroR{
+    @apply w-full h-[1000px]  font-[poppins] overflow-hidden
+}
+.contenedor-titulo-heroR{
+    @apply  text-end h-[80%] w-[70%] mx-auto flex items-center justify-end font-bold tracking-[10px]
+}
+.titulo-heroR{
+    @apply text-[70px] text-white z-50 
+    
+}
+
+.contenedor-inf-heroR{
+    @apply  text-center bg-gradient-to-l from-[#064846] via-[#022941] via-50% to-[#09604b]
+    text-white h-[40%] py-[2%] z-50 relative space-y-5
+}
+
+.img-fondo-heroR{
+    @apply z-0 bg-cover bg-fixed bg-center 
+}
+
+.subtitulo-heroR{
+    @apply text-[60px] tracking-wider font-bold uppercase
+}
+
+.texto-heroR{
+    @apply text-[18px] w-[50%] mx-auto
+}
+
+.bg-heroR{
+    @apply w-full h-[80%] relative z-10
+     bg-gradient-to-r from-[#098354]/20 to-[#032E42]/80
+}
