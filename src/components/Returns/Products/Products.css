@@ -3,6 +3,7 @@
 .section-productsR{
     @apply space-y-6 px-5 py-8 text-center   font-[poppins]
     lg:space-y-7 lg:text-xl 2xl:space-y-8  2xl:text-2xl overflow-hidden
+    bg-gradient-to-br from-[#098354] via-[#006A7A] to-[#032E42]
 }
 
 .bg-secondary{
@@ -21,13 +22,14 @@
 }
 
 .titulo-productsR{
-    @apply text-[55px] font-semibold text-[#006A7A]
+    @apply text-[55px] font-semibold text-white
 }
 .subtitulo-productsR{
     @apply text-[16px] font-medium text-[#000000] -mt-4
 }
 .contenedor-lista-productsR{
-    @apply grid w-2/3 gap-x-0 gap-y-4 lg:grid-cols-2 lg:gap-x-20 lg:text-xl 2xl:grid-cols-3 2xl:gap-x-32 2xl:gap-y-14 2xl:text-2xl
+    @apply grid w-2/3 gap-x-0 gap-y-4 lg:grid-cols-2 lg:gap-x-20 lg:text-xl 2xl:grid-cols-3 
+    2xl:gap-x-32 2xl:gap-y-14 2xl:text-2xl overflow-x-auto
 }
 
 .contenedor-item-productsR{
@@ -42,9 +44,10 @@
 
 .contenedor-items-productsR{
     @apply w-[220px] h-[220px] items-center gap-x-5 bg-[#D9D9D9] rounded-2xl shadow-md p-6 translate-y-20
-    hover:bg-gradient-to-br from-[#098354] via-[#006A7A] to-[#032E42] transition-all duration-300
-    hover:translate-y-17 opacity-100
-    group-hover:opacity-40
+     transition-all duration-300
+     hover:bg-[#8FCB80]
+    hover:translate-y-17 
+    group-hover:opacity-40 opacity-100
     hover:!opacity-100
     hover:text-white
 }
@@ -56,5 +59,4 @@
 .desc-icon-productsR{
     @apply text-center text-[20px] mt-2
 }
- 
  

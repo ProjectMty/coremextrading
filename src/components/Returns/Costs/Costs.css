@@ -7,7 +7,7 @@
 }
 
 .titulo-costsR {
-    @apply text-center text-[#006a7a] text-[55px] font-bold
+    @apply text-center text-[#006a7a] text-[50px] font-bold 
 }
 
 .desc-costsR {
@@ -24,8 +24,8 @@
 }
 
 .boton-carrusel-costsR {
-    @apply bg-[#088054] flex gap-2 h-[40px]
+    @apply bg-[#8FCB80] flex gap-2 h-[50px]
     rounded-none py-0 text-center justify-center items-center uppercase text-white 
-    lg:text-lg 2xl:text-xl w-3/4 md:w-1/3 xl:w-56
+    lg:text-lg 2xl:text-xl w-3/4 md:w-1/3 xl:w-56 font-semibold tracking-widest
 }
 

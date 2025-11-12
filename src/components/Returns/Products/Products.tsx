@@ -160,7 +160,7 @@ export default function Products_Returns() {
                 <div className='flex justify-around'>
                     <motion.ul
                         {...animateIconsParent}
-                        className='contenedor-lista-productsR'
+                        className='contenedor-lista-productsR '
                     >
                         {process.map(({ id, icon, description, color }) => (
                             <motion.li key={id} id={id} className='contenedor-item-productsR' {...animateIconsChild}>

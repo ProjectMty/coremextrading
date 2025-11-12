@@ -12,8 +12,8 @@
 }
 
 .contenedor-inf-heroR{
-    @apply  text-center bg-gradient-to-l from-[#064846] via-[#022941] via-50% to-[#09604b]
-    text-white h-[40%] py-[2%] z-50 relative space-y-5
+    @apply  text-center bg-white to-[#09604b]
+    text-[#006A7A] h-[40%] py-[2%] z-50 relative space-y-5
 }
 
 .img-fondo-heroR{
@@ -25,7 +25,7 @@
 }
 
 .texto-heroR{
-    @apply text-[18px] w-[50%] mx-auto
+    @apply text-[18px] w-[50%] mx-auto text-black
 }
 
 .bg-heroR{

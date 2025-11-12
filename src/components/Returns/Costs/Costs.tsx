@@ -144,7 +144,7 @@ export default function Costs_Returns() {
         className="section-costsR"
       >
         <motion.h3 {...animateFadeIn} className='titulo-costsR'>
-          How much do returns cost?
+          HOW MUCH DO RETURNS COST?
         </motion.h3>
         <motion.p {...animateFadeIn} className='desc-costsR'>
           While Core Mex offers several options for returns management, our most popular is the consolidate and return to seller model. We receive your returns on a daily basis, inform you of the inventory status, and consolidate. We ship back to you when you’re ready! 
@@ -152,7 +152,7 @@ export default function Costs_Returns() {
        
       </div>
       <div
-        className="mt-30 relative"
+        className="translate-y-[10%] relative"
         style={{
           height: `clamp(${CARD.height.base}px, 52vw, ${CARD.height.md}px)`,
         }}
