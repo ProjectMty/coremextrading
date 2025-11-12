@@ -146,7 +146,10 @@ export default function Products_Returns() {
         <section className="section-productsR">
          
                 <motion.h3 {...animateFadeIn} className='titulo-productsR'>
-                    What products do we handle?
+                    WHAT PRODUCTS DO WE HAVE?
+                </motion.h3>
+                <motion.h3 {...animateFadeIn} className='subtitulo-productsR'>
+                    We service returns from Amazon FBA, Mercado Libre, or parcel shipments direct to client.
                 </motion.h3>
                 <div className='flex justify-around'>
                     <ProductsList products={products} />

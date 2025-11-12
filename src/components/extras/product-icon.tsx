@@ -11,14 +11,11 @@ type ProductIconProps = {
 export default function ProductIcon({ icon, color }: ProductIconProps) {
   return (
     <div
-      className={clsx(
-        'flex h-[34px] w-[34px] items-center justify-center rounded-full lg:h-[38px] lg:w-[38px] 2xl:h-[52px] 2xl:w-[52px]',
-        color === 'primary' ? 'bg-secondary' : 'bg-primary',
-      )}
+      className="img-icon-productsR"
     >
       <FontAwesomeIcon
         icon={icon}
-        className={color === 'primary' ? 'text-primaryR' : 'text-secondaryR'}
+        className="text-primaryR"
       />
     </div>
   );

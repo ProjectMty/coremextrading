@@ -161,14 +161,14 @@ export default function Costs_Returns() {
       >
         {/* Pila centrada */}
         <div className="contenedor-carrusel-costsR relative flex items-center justify-center">
-          {items.map(({ id, top, content, x, scale, z, opacity, filter }, idx) => (
+          {items.map(({ key, top, content, x, scale, z, opacity, filter }, idx) => (
             <div
-              key={id}
+              key={key}
               className={`
           absolute ${CARD.shadow}
           transition-all duration-500 ease-[cubic-bezier(.2,.65,.2,1)]
           will-change-transform rounded-[22px] pointer-events-none
-          bg-gradient-to-br from-[#0f7050]/90 to-[#022641]/90 
+          bg-gradient-to-br from-[#098354]/100 via-[#006A7A]/100 to-[#022641]/100
         `}
               style={{
                 width: CARD.w,
@@ -178,10 +178,10 @@ export default function Costs_Returns() {
                 filter,
               }}
             >
-              <div className="select-none  rounded-[22px] overflow-hidden">
+              <div className="select-none  rounded-[22px] overflow-hidden" >
                 {/* Header */}
                 <div className="space-y-4  py-6 text-center text-white">
-                  <div className="text-2xl font-black uppercase">{top.title}</div>
+                  <div className="text-[30px] font-bold uppercase tracking-wider w-[80%] mx-auto">{top.title}</div>
                   <div className="text-6xl font-bold">{top.cost}</div>
                   <div className="text-xl font-bold">{top.type}</div>
                 </div>
