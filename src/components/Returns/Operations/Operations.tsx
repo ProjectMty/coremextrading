@@ -23,12 +23,12 @@ const steps = [
   },
   {
     id: 'steps3',
-    image: diagram3step3,
+    image: diagram3step1,
     description: 'Your return is handled according to predefined instructions.',
   },
   {
     id: 'steps4',
-    image: diagram3step4,
+    image: diagram3step2,
     description:
       'Your return is moved to the next phase and either consolidated, forwarded, repackaged, and shipped to new destination.',
   },
