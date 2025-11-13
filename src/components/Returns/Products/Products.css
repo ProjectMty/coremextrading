@@ -7,16 +7,16 @@
 }
 
 .text-primaryR {
-    @apply text-white h-[80px] w-[80px]
+    @apply text-white h-[100px] w-[100px]
 }
 
 
 .titulo-productsR {
-    @apply text-[55px] font-semibold text-white
+    @apply text-[40px] font-semibold text-white
 }
 
 .subtitulo-productsR {
-    @apply text-[16px] font-medium text-[#000000] -mt-4
+    @apply text-[20px] font-medium text-[#000000] -mt-4
 }
 
 .contenedor-item-productsR {
@@ -32,7 +32,7 @@
 }
 
 .contenedor-items-productsR {
-    @apply w-[220px] h-[220px] items-center gap-x-5 bg-[#D9D9D9] rounded-2xl 
+    @apply w-[350px] h-[200px] items-center gap-x-5 bg-[#D9D9D9] rounded-2xl 
     shadow-md p-6 translate-y-20 transition-all duration-300 hover:bg-[#8FCB80] hover:translate-y-17 group-hover:opacity-40 opacity-100 hover:!opacity-100 hover:text-white
 }
 
@@ -63,9 +63,84 @@
 .swiper-scrollbar-drag:hover {
   background: #8FCB80;
 }
+
+.contenedor-swiper-productsR{
+    @apply h-full 
+}
+.contenedor-carrusel-productsR{
+    @apply  relative w-[90%] mx-auto h-[400px] pb-10
+}
 }
 @media (min-width: 501px) and (max-width: 1024px){
+ .section-productsR {
+    @apply space-y-6 px-5 py-8 text-center font-[poppins] 
+     overflow-hidden bg-gradient-to-br from-[#098354] via-[#006A7A] to-[#032E42]
+}
 
+.text-primaryR {
+    @apply text-white h-[100px] w-[100px]
+}
+
+
+.titulo-productsR {
+    @apply text-[45px] font-semibold text-white
+}
+
+.subtitulo-productsR {
+    @apply text-[20px] font-medium text-[#000000] -mt-4
+}
+
+.contenedor-item-productsR {
+    @apply flex items-center gap-x-7
+}
+
+.img-item-productsR {
+    @apply h-[34px] w-[34px] rounded-full p-1 lg:h-[38px] lg:w-[38px] 2xl:h-[52px] 2xl:w-[52px]
+}
+
+.description-item-productsR {
+    @apply w-fit text-left
+}
+
+.contenedor-items-productsR {
+    @apply w-[320px] h-[220px] items-center gap-x-5 bg-[#D9D9D9] rounded-2xl 
+    shadow-md p-6 translate-y-20 transition-all duration-300 hover:bg-[#8FCB80] hover:translate-y-17 group-hover:opacity-40 opacity-100 hover:!opacity-100 hover:text-white
+}
+
+.img-icon-productsR {
+    @apply content-center items-center justify-center rounded-full h-[100px] w-[100px] mx-auto
+}
+
+.desc-icon-productsR {
+    @apply text-center text-[20px] mt-2
+}
+
+/* SCROLLBAR */
+.swiper-scrollbar {
+  background: rgba(255, 255, 255, 0.2);
+  height: 10px !important;
+  border-radius: 10px;
+  bottom: 10px !important;
+  left: 10%;
+  width: 80%;
+}
+
+.swiper-scrollbar-drag {
+  border-radius: 4px;
+  height: 100%;
+  transition: background 0.3s ease;
+}
+
+.swiper-scrollbar-drag:hover {
+  background: #8FCB80;
+}
+
+.contenedor-swiper-productsR{
+    @apply h-full 
+}
+.contenedor-carrusel-productsR{
+    @apply  relative w-[90%] mx-auto h-[400px] pb-10
+}
 }
 @media (min-width: 1025px) and (max-width: 1500px){
     .section-productsR {
@@ -128,6 +203,14 @@
 
 .swiper-scrollbar-drag:hover {
   background: #8FCB80;
+}
+
+
+.contenedor-swiper-productsR{
+    @apply h-full 
+}
+.contenedor-carrusel-productsR{
+    @apply  relative w-[90%] mx-auto h-[400px] pb-10
 }
 }
 @media (min-width: 1501px) and (max-width: 2000px){
@@ -192,10 +275,17 @@
 .swiper-scrollbar-drag:hover {
   background: #8FCB80;
 }
+
+.contenedor-swiper-productsR{
+    @apply h-full 
+}
+.contenedor-carrusel-productsR{
+    @apply  relative w-[70%] mx-auto h-[400px] pb-10
+}
 }
 @media (min-width: 2001px) {
     .section-productsR {
-    @apply space-y-6 px-5 py-8 text-center font-[poppins] lg:space-y-7 lg:text-xl 2xl:space-y-8 2xl:text-2xl overflow-hidden bg-gradient-to-br from-[#098354] via-[#006A7A] to-[#032E42]
+    @apply  px-5 py-8 text-center font-[poppins] space-y-8 text-2xl overflow-hidden bg-gradient-to-br from-[#098354] via-[#006A7A] to-[#032E42]
 }
 
 .text-primaryR {
@@ -216,7 +306,7 @@
 }
 
 .img-item-productsR {
-    @apply h-[34px] w-[34px] rounded-full p-1 lg:h-[38px] lg:w-[38px] 2xl:h-[52px] 2xl:w-[52px]
+    @apply h-[34px]  rounded-full p-1 w-[52px]
 }
 
 .description-item-productsR {
@@ -242,7 +332,6 @@
   height: 10px !important;
   border-radius: 10px;
   bottom: 10px !important;
-  left: 10%;
   width: 80%;
 }
 
@@ -254,5 +343,12 @@
 
 .swiper-scrollbar-drag:hover {
   background: #8FCB80;
+}
+
+.contenedor-swiper-productsR{
+    @apply h-full
+}
+.contenedor-carrusel-productsR{
+    @apply  relative w-[55%] mx-auto h-[400px] pb-10
 }
 }

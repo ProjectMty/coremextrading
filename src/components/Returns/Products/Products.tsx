@@ -105,7 +105,7 @@ export default function Products_Returns() {
             <motion.h3 {...animateFadeIn} className='subtitulo-productsR'>
                 We service returns from Amazon FBA, Mercado Libre, or parcel shipments direct to client.
             </motion.h3>
-            <div className=' relative w-[70%] mx-auto h-[400px] pb-10 group'>
+            <div className='contenedor-carrusel-productsR group'>
                 <ProductsList products={products} />
             </div>
 

@@ -26,11 +26,11 @@ export default function ProductsList({ products }: ProductsListProps) {
       slidesPerView={5}
 
       breakpoints={{
-        320: { slidesPerView: 1 },   // celulares muy pequeños
-        480: { slidesPerView: 2 },   // celulares normales
-        640: { slidesPerView: 3 },   // tablets pequeñas
-        1024: { slidesPerView: 4 },  // laptops
-        1280: { slidesPerView: 5 },  // pantallas grandes
+         320: { slidesPerView: 1 }, 
+        480: { slidesPerView: 1 },   
+        640: { slidesPerView: 2 },   
+        1024: { slidesPerView: 4 },  
+        1280: { slidesPerView: 5 },  
       }}
       autoplay={{
         delay: 2500,
@@ -40,7 +40,7 @@ export default function ProductsList({ products }: ProductsListProps) {
         draggable: true,
         hide: false,
       }}
-      className='h-full'
+      className='contenedor-swiper-productsR'
     >
       {products.map(({ id, icon, description }, index) => (
         <SwiperSlide key={id}>
