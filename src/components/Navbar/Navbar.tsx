@@ -1,14 +1,11 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { useEffect, useState, Fragment, useRef } from 'react';
 import Image from 'next/image'; // ⬅️ IMPORTANTE
 import "@/style/headerHero.css"
 import { Dialog, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { useHoverAnimation } from "@/animate/useHoverAnimation";
-
 
 
 const NAV = [

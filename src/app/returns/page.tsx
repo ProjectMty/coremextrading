@@ -6,6 +6,7 @@ import Products_Returns from "@/components/Returns/Products/Products";
 import Formulario from '@/components/Formulario';
 import GetStarted from '@/components/GetStarted';
 import Contact from '@/components/Contact';
+import Processing_Returns from "@/components/Returns/Processing/Processing";
 
 export default function Returns() {
     return (
@@ -13,6 +14,7 @@ export default function Returns() {
             <Navbar />
             <Hero_Returns />
             <Products_Returns />
+            <Processing_Returns/>
             <Costs_Returns />
             <Operations_Returns />
             <GetStarted />

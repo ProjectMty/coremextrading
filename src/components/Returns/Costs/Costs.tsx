@@ -1,14 +1,11 @@
 "use client";
 import Section from '@/components/extras/section';
-import { Carousel, CarouselContent, CarouselItem } from '@/components/extras/carousel';
 import returnCostsData from '@/components/extras/return-cost-data';
 import { animateFadeIn } from '@/utils';
-import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import "@/components/Returns/Costs/Costs.css"
 import { useEffect, useMemo, useRef, useState } from "react";
-import Image from "next/image";
 import "@/style/pricing.css"
 
 
@@ -139,20 +136,17 @@ export default function Costs_Returns() {
 
 
   return (
-    <Section id='returns-cost' className='space-y-4' withPadding={false}>
-      <div
-        className="section-costsR"
-      >
+    <Section id='returns-cost' className='space-y-4 section-costsR' withPadding={false}>
+    
         <motion.h3 {...animateFadeIn} className='titulo-costsR'>
           HOW MUCH DO RETURNS COST?
         </motion.h3>
         <motion.p {...animateFadeIn} className='desc-costsR'>
           While Core Mex offers several options for returns management, our most popular is the consolidate and return to seller model. We receive your returns on a daily basis, inform you of the inventory status, and consolidate. We ship back to you when you’re ready! 
         </motion.p>
-       
-      </div>
+
       <div
-        className="translate-y-[10%] relative"
+        className=" relative overflow-visible  w-full h-full"
         style={{
           height: `clamp(${CARD.height.base}px, 52vw, ${CARD.height.md}px)`,
         }}
@@ -206,13 +200,13 @@ export default function Costs_Returns() {
           aria-label="Previous"
           onClick={() => setCurrent((c) => c - 1)}
           className="
-            absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-[200]
+            absolute left-[30%]  top-1/2 -translate-y-1/2 z-[200]
             inline-flex items-center justify-center
-            h-10 w-10 rounded-full bg-white shadow-md ring-1 ring-black/10
+            h-20 w-20 rounded-full bg-white shadow-md ring-1 ring-black/10
             hover:bg-white/90 transition
           "
         >
-          <svg viewBox="0 0 24 24" className="h-5 w-5 text-black/70">
+          <svg viewBox="0 0 24 24" className="h-15 w-15 text-black/70">
             <path
               fill="currentColor"
               d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
@@ -224,13 +218,13 @@ export default function Costs_Returns() {
           aria-label="Next"
           onClick={() => setCurrent((c) => c + 1)}
           className="
-            absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-[200]
+            absolute right-[30%] top-1/2 -translate-y-1/2 z-[200]
             inline-flex items-center justify-center
-            h-10 w-10 rounded-full bg-white shadow-md ring-1 ring-black/10
+            h-20 w-20 rounded-full bg-white shadow-md ring-1 ring-black/10
             hover:bg-white/90 transition
           "
         >
-          <svg viewBox="0 0 24 24" className="h-5 w-5 text-black/70">
+          <svg viewBox="0 0 24 24" className="h-15 w-15 text-black/70">
             <path
               fill="currentColor"
               d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"

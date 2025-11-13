@@ -20,26 +20,31 @@ type ProductsListProps = {
 
 export default function ProductsList({ products }: ProductsListProps) {
   return (
-     <Swiper
-     modules={[Navigation, Autoplay, Scrollbar]}
+    <Swiper
+      modules={[Navigation, Autoplay, Scrollbar]}
       spaceBetween={30}
-      slidesPerView={6}
-      loop
-      grabCursor
-    
+      slidesPerView={5}
+
+      breakpoints={{
+        320: { slidesPerView: 1 },   // celulares muy pequeños
+        480: { slidesPerView: 2 },   // celulares normales
+        640: { slidesPerView: 3 },   // tablets pequeñas
+        1024: { slidesPerView: 4 },  // laptops
+        1280: { slidesPerView: 5 },  // pantallas grandes
+      }}
       autoplay={{
         delay: 2500,
         disableOnInteraction: false,
       }}
-       scrollbar={{
-          draggable: true, 
-          hide: false,    
-        }}
-      className='w-[70%] mx-auto h-[400px] pb-10 group'
+      scrollbar={{
+        draggable: true,
+        hide: false,
+      }}
+      className='h-full'
     >
       {products.map(({ id, icon, description }, index) => (
-          <SwiperSlide key={id}>
-        <div className="contenedor-items-productsR">
+        <SwiperSlide key={id}>
+          <div className="contenedor-items-productsR">
             <ProductIcon
               icon={icon}
               color={index % 2 === 0 ? "primary" : "secondary"}
@@ -48,6 +53,7 @@ export default function ProductsList({ products }: ProductsListProps) {
           </div>
         </SwiperSlide>
       ))}
-      </Swiper>
+
+    </Swiper>
   );
 }
