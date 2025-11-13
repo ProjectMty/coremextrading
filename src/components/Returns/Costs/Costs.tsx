@@ -146,10 +146,8 @@ export default function Costs_Returns() {
         </motion.p>
 
       <div
-        className=" relative overflow-visible  w-full h-full"
-        style={{
-          height: `clamp(${CARD.height.base}px, 52vw, ${CARD.height.md}px)`,
-        }}
+        className=" relative overflow-hidden w-full h-full"
+       
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
       >
@@ -161,7 +159,7 @@ export default function Costs_Returns() {
               className={`
           absolute ${CARD.shadow}
           transition-all duration-500 ease-[cubic-bezier(.2,.65,.2,1)]
-          will-change-transform rounded-[22px] pointer-events-none
+          will-change-transform rounded-[22px] 
           bg-gradient-to-br from-[#098354]/100 via-[#006A7A]/100 to-[#022641]/100
         `}
               style={{
@@ -172,7 +170,7 @@ export default function Costs_Returns() {
                 filter,
               }}
             >
-              <div className="select-none  rounded-[22px] overflow-hidden" >
+              <div className="  rounded-[22px] overflow-hidden" >
                 {/* Header */}
                 <div className="space-y-4  py-6 text-center text-white">
                   <div className="text-[30px] font-bold uppercase tracking-wider w-[80%] mx-auto">{top.title}</div>
@@ -184,7 +182,7 @@ export default function Costs_Returns() {
                 <div className="flex min-h-[630px] flex-col items-center justify-between pb-6 text-white">
                   <div>{content}</div>
                   <Link
-                    href="/contact-us#form"
+                    href="#contact"
                     className="boton-carrusel-costsR"
                   >
                     Started
