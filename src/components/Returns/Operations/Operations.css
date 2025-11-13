@@ -1,0 +1,9 @@
+@reference "tailwindcss";
+
+.section-operationsR{
+    @apply bg-white  text-center  font-[poppins] overflow-hidden
+}
+
+.titulo-operationsR{
+    @apply text-[#006a7a] text-[55px] font-bold tracking-wider
+}

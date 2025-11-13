@@ -1,0 +1,175 @@
+@reference "tailwindcss";
+
+
+@media (min-width: 0px) and (max-width: 500px) {
+
+.section-heroR{
+    @apply w-screen h-screen  font-[poppins] overflow-hidden
+}
+.contenedor-titulo-heroR{
+    @apply  text-center h-[70%] w-[80%] mx-auto flex items-center  justify-center font-bold tracking-[5px]
+}
+.titulo-heroR{
+    @apply text-[40px] text-white z-50 
+}
+
+.contenedor-inf-heroR{
+    @apply  text-center bg-white 
+    text-[#006A7A] h-[60%] py-[4%] z-50 relative space-y-2
+}
+
+.img-fondo-heroR{
+    @apply z-0 bg-cover bg-fixed bg-center 
+}
+
+.subtitulo-heroR{
+    @apply text-[28px] tracking-wider font-bold uppercase
+}
+
+.texto-heroR{
+    @apply text-[17px] w-[90%] mx-auto text-black
+}
+
+.bg-heroR{
+    @apply w-full h-[80%] relative z-10
+     bg-gradient-to-r from-[#098354]/20 to-[#032E42]/80
+}
+}
+@media (min-width: 501px) and (max-width: 1024px) {
+
+.section-heroR{
+    @apply w-screen h-screen  font-[poppins] overflow-hidden
+}
+.contenedor-titulo-heroR{
+    @apply  text-center h-[80%] w-[80%] mx-auto flex items-center  justify-center font-bold tracking-[10px]
+}
+.titulo-heroR{
+    @apply text-[50px] text-white z-50 
+}
+
+.contenedor-inf-heroR{
+    @apply  text-center bg-white 
+    text-[#006A7A] h-[60%] py-[5%] z-50 relative space-y-2
+}
+
+.img-fondo-heroR{
+    @apply z-0 bg-cover bg-fixed bg-center 
+}
+
+.subtitulo-heroR{
+    @apply text-[40px] tracking-wider font-bold uppercase
+}
+
+.texto-heroR{
+    @apply text-[25px] w-[70%] mx-auto text-black mt-10
+}
+
+.bg-heroR{
+    @apply w-full h-[80%] relative z-10
+     bg-gradient-to-r from-[#098354]/20 to-[#032E42]/80
+}
+}
+
+@media (min-width: 1025px) and (max-width: 1500px) {
+
+.section-heroR{
+    @apply w-full h-screen  font-[poppins] overflow-hidden
+}
+.contenedor-titulo-heroR{
+    @apply  text-end h-[80%] w-[70%] mx-auto flex items-center justify-end font-bold tracking-[10px]
+}
+.titulo-heroR{
+    @apply text-[70px] text-white z-50 
+}
+
+.contenedor-inf-heroR{
+    @apply  text-center bg-white to-[#09604b]
+    text-[#006A7A] h-[50%] py-[6%] z-50 relative space-y-5
+}
+
+.img-fondo-heroR{
+    @apply z-0 bg-cover bg-fixed bg-center 
+}
+
+.subtitulo-heroR{
+    @apply text-[60px] tracking-wider font-bold uppercase
+}
+
+.texto-heroR{
+    @apply text-[18px] w-[50%] mx-auto text-black
+}
+
+.bg-heroR{
+    @apply w-full h-[80%] relative z-10
+     bg-gradient-to-r from-[#098354]/20 to-[#032E42]/80
+}
+}
+
+@media (min-width: 1501px) and (max-width: 2000px) {
+
+.section-heroR{
+    @apply w-full h-screen  font-[poppins] overflow-hidden
+}
+.contenedor-titulo-heroR{
+    @apply  text-end h-[80%] w-[70%] mx-auto flex items-center justify-end font-bold tracking-[10px]
+}
+.titulo-heroR{
+    @apply text-[80px] text-white z-50 
+}
+
+.contenedor-inf-heroR{
+    @apply  text-center bg-white 
+    text-[#006A7A] h-[50%] py-[2%] z-50 relative space-y-5
+}
+
+.img-fondo-heroR{
+    @apply z-0 bg-cover bg-fixed bg-center 
+}
+
+.subtitulo-heroR{
+    @apply text-[60px] tracking-wider font-bold uppercase
+}
+
+.texto-heroR{
+    @apply text-[20px] w-[50%] mx-auto text-black
+}
+
+.bg-heroR{
+    @apply w-full h-[80%] relative z-10
+     bg-gradient-to-r from-[#098354]/20 to-[#032E42]/80
+}
+}
+@media (min-width: 2001px) {
+
+.section-heroR{
+    @apply w-full h-screen  font-[poppins] overflow-hidden
+}
+.contenedor-titulo-heroR{
+    @apply  text-end h-[80%] w-[70%] mx-auto flex items-center justify-end font-bold tracking-[10px]
+}
+.titulo-heroR{
+    @apply text-[70px] text-white z-50 
+}
+
+.contenedor-inf-heroR{
+    @apply  text-center bg-white 
+    text-[#006A7A] h-[50%] py-[2%] z-50 relative space-y-5
+}
+
+.img-fondo-heroR{
+    @apply z-0 bg-cover bg-fixed bg-center 
+}
+
+.subtitulo-heroR{
+    @apply text-[60px] tracking-wider font-bold uppercase
+}
+
+.texto-heroR{
+    @apply text-[25px] w-[30%] mx-auto text-black
+}
+
+.bg-heroR{
+    @apply w-full h-[80%] relative z-10
+     bg-gradient-to-r from-[#098354]/20 to-[#032E42]/80
+}
+}

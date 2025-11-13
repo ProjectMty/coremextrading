@@ -1,0 +1,31 @@
+@reference "tailwindcss";
+
+.section-costsR {
+    @apply space-y-8 md:mx-auto md:w-3/4 px-4 sm:px-8 md:px-12 
+    lg:px-16 xl:px-20 2xl:px-24 py-2 sm:py-4 md:py-6 lg:py-8 xl:py-10 
+    2xl:py-12 font-[poppins] h-[1100px]
+}
+
+.titulo-costsR {
+    @apply text-center text-[#006a7a] text-[50px] font-bold 
+}
+
+.desc-costsR {
+    @apply text-center text-[#022641]
+}
+
+.color-text-costsR {
+    @apply text-[#088054] font-bold
+}
+
+.contenedor-carrusel-costsR {
+    @apply w-full h-[100%] sm:w-auto md:basis-1/2 lg:basis-1/3 xl:basis-1/4 2xl:basis-1/5
+   mt-[10%]
+}
+
+.boton-carrusel-costsR {
+    @apply bg-[#8FCB80] flex gap-2 h-[50px]
+    rounded-none py-0 text-center justify-center items-center uppercase text-white 
+    lg:text-lg 2xl:text-xl w-3/4 md:w-1/3 xl:w-56 font-semibold tracking-widest
+}
+
