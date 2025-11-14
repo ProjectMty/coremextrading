@@ -5,10 +5,9 @@ import "@/components/Returns/Products/Products.css"
 
 type ProductIconProps = {
   icon: IconDefinition;
-  color: 'primary' | 'secondary';
 };
 
-export default function ProductIcon({ icon, color }: ProductIconProps) {
+export default function ProductIcon({ icon }: ProductIconProps) {
   return (
     <div
       className="img-icon-productsR"

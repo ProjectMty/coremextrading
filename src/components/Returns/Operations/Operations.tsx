@@ -1,43 +1,42 @@
 "use client";
 import Diagram from '@/components/extras/diagram';
-import Section from '@/components/extras/section';
 import { animateFadeIn } from '@/utils';
 import { motion } from 'framer-motion';
 import "@/components/Returns/Operations/Operations.css"
-import diagram3step1 from './assets/logistics_1.svg';
-import diagram3step2 from './assets/logistics_2.svg';
-import diagram3step3 from './assets/logistics_3.svg';
-import diagram3step4 from './assets/logistics_4.svg'; 
 
+import Step1 from './assets/Step1.png'
+import Step2 from './assets/Step2.png'
+import Step3 from './assets/Step3.png'
+import Step4 from './assets/Step4.png'
 
 const steps = [
   {
-    id: 'steps1',
-    image: diagram3step1,
+    id: 1,
+    image: Step1,
     description: 'We receive and check in your return including labeling and registration.',
   },
   {
-    id: 'steps2',
-    image: diagram3step2,
+    id: 2,
+    image: Step2,
     description: 'Your return is inspected and categorized based on packaging and item condition.',
   },
   {
-    id: 'steps3',
-    image: diagram3step1,
+    id: 3,
+    image: Step3,
     description: 'Your return is handled according to predefined instructions.',
   },
   {
-    id: 'steps4',
-    image: diagram3step2,
+    id: 4,
+    image: Step4,
     description:
       'Your return is moved to the next phase and either consolidated, forwarded, repackaged, and shipped to new destination.',
   },
 ];
 export default function Operations_Returns() {
   return (
-    <Section id='logistic-process' className='section-operationsR'>
+    <section  className='section-operationsR'>
       <motion.h2 {...animateFadeIn} className='titulo-operationsR'>Operational Process</motion.h2>
       <Diagram section='logistics-process' steps={steps} />
-    </Section>
+    </section>
   );
 }

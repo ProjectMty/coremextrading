@@ -21,7 +21,7 @@ type ProductsListProps = {
 export default function ProductsList({ products }: ProductsListProps) {
   return (
     <Swiper
-      modules={[Navigation, Autoplay, Scrollbar]}
+      modules={[Navigation, Scrollbar]}
       spaceBetween={30}
       slidesPerView={5}
 
@@ -32,10 +32,7 @@ export default function ProductsList({ products }: ProductsListProps) {
         1024: { slidesPerView: 4 },  
         1280: { slidesPerView: 5 },  
       }}
-      autoplay={{
-        delay: 2500,
-        disableOnInteraction: false,
-      }}
+  
       scrollbar={{
         draggable: true,
         hide: false,
@@ -47,7 +44,6 @@ export default function ProductsList({ products }: ProductsListProps) {
           <div className="contenedor-items-productsR">
             <ProductIcon
               icon={icon}
-              color={index % 2 === 0 ? "primary" : "secondary"}
             />
             <p className="desc-icon-productsR">{description}</p>
           </div>
