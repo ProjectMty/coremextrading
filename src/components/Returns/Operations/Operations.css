@@ -1,9 +1,152 @@
 @reference "tailwindcss";
 
+@media (min-width: 0px) and (max-width: 500px){
+
 .section-operationsR{
-    @apply bg-white  text-center  font-[poppins] overflow-hidden
+    @apply bg-gradient-to-br from-[#098354] via-[#006A7A] to-[#032E42]
+      text-center  font-[poppins] overflow-hidden h-fit
 }
 
 .titulo-operationsR{
-    @apply text-[#006a7a] text-[55px] font-bold tracking-wider
+    @apply text-white text-[55px] font-bold tracking-wider mt-10
 }
+.contenedor-pasos-operationsR{
+    @apply   grid grid-cols-1  justify-center gap-16 
+    mx-auto w-[90%] h-full mt-5 mb-10
+}
+
+.contenedor-numero-operationsR{
+    @apply absolute right-0 -top-5 flex h-20 w-20 items-center justify-center 
+    rounded-full bg-[#8FCB80] text-center font-semibold text-white drop-shadow
+    text-[45px]
+}
+
+.contenedor-paso1-operationsR{
+    @apply relative max-w-[250px] h-[100%] text-center bg-white rounded-[40px] mx-auto p-5
+}
+.contenedor-paso2-operationsR{
+    @apply relative max-w-[250px] h-[100%] text-center bg-white rounded-[40px] mx-auto p-5
+}
+}
+@media (min-width: 501px) and (max-width: 1024px){
+
+.section-operationsR{
+    @apply bg-gradient-to-br from-[#098354] via-[#006A7A] to-[#032E42]
+      text-center  font-[poppins] overflow-hidden h-fit
+}
+
+.titulo-operationsR{
+    @apply text-white text-[55px] font-bold tracking-wider mt-10
+}
+.contenedor-pasos-operationsR{
+    @apply   grid grid-cols-2  justify-center gap-16 
+    mx-auto w-[80%] h-full mt-10 mb-10
+}
+
+
+.contenedor-numero-operationsR{
+    @apply absolute -right-5 -top-5 flex h-20 w-20 items-center justify-center 
+    rounded-full bg-[#8FCB80] text-center font-semibold text-white drop-shadow
+    text-[45px]
+}
+
+.contenedor-paso1-operationsR{
+    @apply relative max-w-[250px] h-[100%] text-center bg-white rounded-[40px] p-2
+}
+.contenedor-paso2-operationsR{
+    @apply relative max-w-[250px] h-[100%] text-center bg-white rounded-[40px] p-2
+}
+}
+@media (min-width: 1025px) and (max-width: 1500px){
+
+.section-operationsR{
+    @apply bg-gradient-to-br from-[#098354] via-[#006A7A] to-[#032E42]
+      text-center  font-[poppins] overflow-hidden h-screen
+}
+
+.titulo-operationsR{
+    @apply text-white text-[55px] font-bold tracking-wider mt-10
+}
+.contenedor-pasos-operationsR{
+    @apply   grid grid-cols-4  justify-center gap-16 
+    mx-auto w-[80%] h-full mt-20
+}
+
+
+.contenedor-numero-operationsR{
+    @apply absolute -right-5 -top-5 flex h-20 w-20 items-center justify-center 
+    rounded-full bg-[#8FCB80] text-center font-semibold text-white drop-shadow
+    text-[45px]
+}
+
+.contenedor-paso1-operationsR{
+    @apply relative max-w-[300px] h-[45%] text-center bg-white rounded-[40px] translate-y-[50%]
+    p-2
+}
+.contenedor-paso2-operationsR{
+    @apply relative max-w-[300px] h-[45%] text-center bg-white rounded-[40px] 
+    p-2
+}
+}
+@media (min-width: 1501px) and (max-width: 2000px){
+
+.section-operationsR{
+    @apply bg-gradient-to-br from-[#098354] via-[#006A7A] to-[#032E42]
+      text-center  font-[poppins] overflow-hidden h-screen
+}
+
+.titulo-operationsR{
+    @apply text-white text-[55px] font-bold tracking-wider mt-10
+}
+.contenedor-pasos-operationsR{
+    @apply   grid grid-cols-4  justify-center gap-16 
+    mx-auto w-[70%] h-full mt-20
+}
+
+
+.contenedor-numero-operationsR{
+    @apply absolute -right-5 -top-5 flex h-20 w-20 items-center justify-center 
+    rounded-full bg-[#8FCB80] text-center font-semibold text-white drop-shadow
+    text-[45px]
+}
+
+.contenedor-paso1-operationsR{
+    @apply relative max-w-[250px] h-[35%] text-center bg-white rounded-[40px] translate-y-[90%]
+}
+.contenedor-paso2-operationsR{
+    @apply relative max-w-[250px] h-[35%] text-center bg-white rounded-[40px] 
+}
+}
+@media (min-width: 2001px){
+
+.section-operationsR{
+    @apply bg-gradient-to-br from-[#098354] via-[#006A7A] to-[#032E42]
+      text-center  font-[poppins] overflow-hidden h-screen
+}
+
+.titulo-operationsR{
+    @apply text-white text-[55px] font-bold tracking-wider mt-10
+}
+.contenedor-pasos-operationsR{
+    @apply   grid grid-cols-4  justify-center gap-16 
+    mx-auto w-[70%] h-full mt-20
+}
+
+
+.contenedor-numero-operationsR{
+    @apply absolute -right-5 -top-5 flex h-20 w-20 items-center justify-center 
+    rounded-full bg-[#8FCB80] text-center font-semibold text-white drop-shadow
+    text-[45px]
+}
+
+.contenedor-paso1-operationsR{
+    @apply relative max-w-[350px] h-[30%] text-center bg-white rounded-[40px] py-10 translate-y-[90%]
+}
+.contenedor-paso2-operationsR{
+    @apply relative max-w-[350px] h-[30%] text-center bg-white rounded-[40px] py-10
+}
+}
+/* .contenedor-pasos-operationsR{
+    @apply bg-white rounded-[40px] flex flex-wrap items-baseline justify-center gap-16 xl:gap-x-32 xl:gap-y-8
+    mx-auto max-w-full 2xl:max-w-7xl 
+} */

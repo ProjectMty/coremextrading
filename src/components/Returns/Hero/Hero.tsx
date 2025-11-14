@@ -16,7 +16,10 @@ export default function Hero_Returns() {
             </Image>
             <div className="bg-heroR">
                 <div className="contenedor-titulo-heroR">
-                    <p className="titulo-heroR">RETURNS <br /> MANAGEMENT</p>
+                    <motion.h2 {...animateFadeIn} className="titulo-heroR">
+                     RETURNS <br /> MANAGEMENT
+                    </motion.h2>
+                   
                 </div>
                 <div className="contenedor-inf-heroR">
 

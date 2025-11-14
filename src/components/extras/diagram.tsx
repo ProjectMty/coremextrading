@@ -1,9 +1,10 @@
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import Image, { StaticImageData } from 'next/image';
+import UpAnimate from '../Animate/UpAnimate';
 
 type StepData = {
-  id: string;
+  id: number;
   image: StaticImageData;
   description: string;
 };
@@ -27,7 +28,7 @@ const aniamteCircle = {
 };
 
 const animateImage = {
-  initial: { y: -100, opacity: 0 },
+  initial: { y: 0, opacity: 0 },
   animate: { y: 0, opacity: 1, transition: { duration: 0.4 } },
 };
 
@@ -39,45 +40,43 @@ const animateDesc = {
 export default function Diagram({ section, steps }: DiagramProps) {
   return (
     <motion.div
-      className={clsx(
-        'bg-white rounded-[40px] flex flex-wrap items-baseline justify-center gap-16 xl:gap-x-32 xl:gap-y-8',
-        'mx-auto max-w-full 2xl:max-w-7xl ',
-      )}
+      className="contenedor-pasos-operationsR"
       variants={animateParent}
       initial='initial'
       whileInView='animate'
     >
       {steps.map(({ id, image, description }, i) => (
-        <div
-          id={`${section}-${id}`}
-          key={`${section}-${id}`}
-          className='relative max-w-[250px] text-center'
-        >
-          <motion.div
-            className='absolute right-6 top-4 flex h-7 w-7 items-center justify-center rounded-full bg-secondary text-center font-black text-white drop-shadow'
-            variants={aniamteCircle}
+        <UpAnimate key={`${section}-${id}`} move={-20}>
+          <div
+            id={`${section}-${id}`}
+            className={id % 2 === 0 ? "contenedor-paso1-operationsR" : "contenedor-paso2-operationsR"}
           >
-            {i + 1}
-          </motion.div>
-          <motion.div className='flex flex-col items-center'>
-            <motion.div variants={animateImage}>
-              <Image
-                src={image}
-                alt={description}
-                width={512}
-                height={512}
-                className='h-64 w-64'
-                style={{ aspectRatio: '1/1' }}
-              />
-            </motion.div>
-            <motion.span
-              className='font-montserrat text-sm font-medium text-gray-500'
-              variants={animateDesc}
+            <motion.div
+              className='contenedor-numero-operationsR z-100'
+              variants={aniamteCircle}
             >
-              {description}
-            </motion.span>
-          </motion.div>
-        </div>
+              {id}
+            </motion.div>
+            <motion.div className='flex flex-col items-center'>
+              <motion.div variants={animateImage}>
+                <Image
+                  src={image}
+                  alt={description}
+                  width={512}
+                  height={512}
+                  className='h-40 w-50 mt-5 z-0'
+                />
+              </motion.div>
+              <motion.span
+                className='w-[80%] mx-auto font-montserrat text-sm font-medium text-gray-500 mt-5'
+                variants={animateDesc}
+              >
+                {description}
+              </motion.span>
+            </motion.div>
+          </div>
+        </UpAnimate>
+
       ))}
     </motion.div>
   );
