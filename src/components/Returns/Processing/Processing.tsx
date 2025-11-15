@@ -68,9 +68,7 @@ export default function Processing_Returns() {
                     {process.map(({ id, description, linea }) => (
                         <motion.li key={id} id={id} className='contenedor-item-processingR' {...animateIconsChild}>
                             <div className={linea}></div>
-                            <DivZoom scale={1.3}>
-                                <div className='grafico-processingR'>{id}</div>
-                            </DivZoom>
+                            <div className='grafico-processingR'>{id}</div>
                             <div className='description-item-processingR'>
                                 <DivZoom
                                     scale={1.2}>
