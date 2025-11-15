@@ -147,7 +147,6 @@ export default function Costs_Returns() {
 
       <div
         className=" relative overflow-hidden w-full h-full"
-       
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
       >
@@ -198,10 +197,7 @@ export default function Costs_Returns() {
           aria-label="Previous"
           onClick={() => setCurrent((c) => c - 1)}
           className="
-            absolute left-[30%]  top-1/2 -translate-y-1/2 z-[200]
-            inline-flex items-center justify-center
-            h-20 w-20 rounded-full bg-white shadow-md ring-1 ring-black/10
-            hover:bg-white/90 transition
+             flecha-carrusel-izq-costsR
           "
         >
           <svg viewBox="0 0 24 24" className="h-15 w-15 text-black/70">
@@ -216,10 +212,7 @@ export default function Costs_Returns() {
           aria-label="Next"
           onClick={() => setCurrent((c) => c + 1)}
           className="
-            absolute right-[30%] top-1/2 -translate-y-1/2 z-[200]
-            inline-flex items-center justify-center
-            h-20 w-20 rounded-full bg-white shadow-md ring-1 ring-black/10
-            hover:bg-white/90 transition
+            flecha-carrusel-der-costsR
           "
         >
           <svg viewBox="0 0 24 24" className="h-15 w-15 text-black/70">
